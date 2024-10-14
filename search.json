@@ -297,7 +297,7 @@
     "href": "session-01.html#images-from-web",
     "title": "Getting Started with Quarto",
     "section": "Images from web",
-    "text": "Images from web\nImages can be embedded using the following syntax: ![caption](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
+    "text": "Images from web\nImages can be embedded using the following syntax: ![caption](image url).\n\nSourceOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -307,7 +307,7 @@
     "href": "session-01.html#images-from-local-directory",
     "title": "Getting Started with Quarto",
     "section": "Images from local directory",
-    "text": "Images from local directory\n\nCodeOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant",
+    "text": "Images from local directory\n\nSourceOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -323,11 +323,11 @@
     ]
   },
   {
-    "objectID": "session-01.html#inline-code",
-    "href": "session-01.html#inline-code",
+    "objectID": "session-01.html#inline-code-non-executable",
+    "href": "session-01.html#inline-code-non-executable",
     "title": "Getting Started with Quarto",
-    "section": "Inline code",
-    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for \\ ` * is \n`` \\ ` * ``\n\n\n\n\n\nDo you know that inline code can be executable as well?",
+    "section": "Inline code (non-executable)",
+    "text": "Inline code (non-executable)\nUse single backticks to format text to look like code\n\nSourceOutput\n\n\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\n\n\nFollow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\n\n\n\n\n\nIf you want to show text containing a backtick using inline code format (for which the backtick will interfere with the formatting), use double backticks `` to surround your text.\nDo you know that inline code can be executable as well?",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -343,11 +343,11 @@
     ]
   },
   {
-    "objectID": "session-01.html#adding-code-chunks-to-your-document",
-    "href": "session-01.html#adding-code-chunks-to-your-document",
+    "objectID": "session-01.html#adding-non-executable-code-chunks-to-your-document",
+    "href": "session-01.html#adding-non-executable-code-chunks-to-your-document",
     "title": "Getting Started with Quarto",
-    "section": "Adding code chunks to your document",
-    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto",
+    "section": "Adding non-executable code chunks to your document",
+    "text": "Adding non-executable code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -357,7 +357,7 @@
     "href": "session-01.html#executable-code-chunks-in-quarto",
     "title": "Getting Started with Quarto",
     "section": "Executable Code Chunks in Quarto",
-    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control",
+    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control at the next session",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -367,7 +367,7 @@
     "href": "session-01.html#more-yaml",
     "title": "Getting Started with Quarto",
     "section": "More YAML",
-    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation\n\n\n\n\n\n\n\n\nCaution\n\n\nProper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.",
+    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nWhat else can you do with YAML document options?\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation\n\n\n\n\n\n\n\n\nCaution\n\n\nProper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -567,28 +567,21 @@
     "href": "hands-on/01-basics.html",
     "title": "Hands-on #1: Basics",
     "section": "",
-    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nFamiliarize yourself with the Visual editor and the Source editor - What’s the difference?\nAdd some headings\nAdd some text in bold or italics.\nRender the document using the Render button."
   },
   {
     "objectID": "hands-on/01-basics.html#hands-on-your-first-quarto-project",
     "href": "hands-on/01-basics.html#hands-on-your-first-quarto-project",
     "title": "Hands-on #1: Basics",
     "section": "",
-    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nFamiliarize yourself with the Visual editor and the Source editor - What’s the difference?\nAdd some headings\nAdd some text in bold or italics.\nRender the document using the Render button."
   },
   {
     "objectID": "hands-on/01-basics.html#hands-on-markdown-basics",
     "href": "hands-on/01-basics.html#hands-on-markdown-basics",
     "title": "Hands-on #1: Basics",
     "section": "Hands-on: Markdown Basics",
-    "text": "Hands-on: Markdown Basics\n\nInstructions:\n\nAdd some numbered list and non-numbered list, using the visual editor. Switch back to the markdown editor and take note of the syntax. Try creating lists using codes as well.\nAdd a piece of text and hyperlink it to a URL.\nInsert the image of a cat cafe into your report. The path to the image is cat-cafe.jpg\n\n\n\n\n\n\nTip\n\n\n\nHint: Use the syntax ![caption](path_to_image). For example, ![Elephant](elephant.png)\n\n\nAdd some executable R code or verbatim code (feel free to use the codes below in the Sample Report).\nRender the document to see the output."
-  },
-  {
-    "objectID": "hands-on/01-basics.html#sample-report",
-    "href": "hands-on/01-basics.html#sample-report",
-    "title": "Hands-on #1: Basics",
-    "section": "Sample Report",
-    "text": "Sample Report\nFeel free to make use of this sample report and try recreating it in your First Quarto Document!\n\nResearch Question\nDo cats prefer window seats or cozy corners in cat cafés?\n\n\nData Collection\nWe observed 50 cats in 5 different cat cafés. We recorded:\n- Cat’s choice of spot (window or corner)\n- Cat’s age (young, adult, senior)\n- Time of day (morning, afternoon, evening)\n\n\nAnalysis\n\n# Create a simple pie chart\ncat_spots &lt;- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")"
+    "text": "Hands-on: Markdown Basics\n\nInstructions:\n\nAdd some numbered list and non-numbered list, using the visual editor. Switch back to the markdown editor and take note of the syntax. Try creating lists using codes as well.\nAdd a piece of text and hyperlink it to a URL.\nInsert the image of a cat cafe into your report. The path to the image is cat-cafe.jpg\n\n\n\n\n\n\nTip\n\n\n\nHint: Use the syntax ![caption](path_to_image). For example, ![Elephant](elephant.png)\n\n\nRender the document to see the output.\n\n\n\nMarkdown Source for Sample Report\n## Sample Report\n\nFeel free to make use of this sample report and try recreating it in your First Quarto Document!\n\n### Research Question\n\nDo cats prefer window seats or cozy corners in cat cafés?\n\n### Data Collection\n\nWe observed 50 cats in 5 different cat cafés. We recorded:\n\n- Cat's choice of spot (window or corner)\n\n- Cat's age (young, adult, senior)\n\n- Time of day (morning, afternoon, evening)\n\n### Analysis\n\n#### Creating a bar chart\n\n```{r}\n# Create a simple pie chart\ncat_spots &lt;- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")\n```"
   },
   {
     "objectID": "hands-on/03a-figures-tables.html",
@@ -609,13 +602,13 @@
     "href": "hands-on/02-YAML.html",
     "title": "Hands-on #2: More YAML",
     "section": "",
-    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n\n\n  id      value category subcategory       date\n1  1  1.6211899        C           Z 2023-01-01\n2  2 -0.8935331        C           X 2023-01-02\n3  3  0.4356744        B           Z 2023-01-03\n4  4 -1.3527186        C           Y 2023-01-04\n5  5 -1.7616731        C           Z 2023-01-05\n6  6  0.7639748        B           X 2023-01-06"
+    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\n```{r}\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\n\n\n\n\nCode\n```{r}\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n```\n\n\n  id      value category subcategory       date\n1  1  2.0054081        B           X 2023-01-01\n2  2 -0.8580242        A           X 2023-01-02\n3  3  0.1842031        A           X 2023-01-03\n4  4  0.4365365        B           X 2023-01-04\n5  5 -0.3561057        A           X 2023-01-05\n6  6  0.7050632        B           Y 2023-01-06"
   },
   {
     "objectID": "hands-on/02-YAML.html#hands-on-more-yaml",
     "href": "hands-on/02-YAML.html#hands-on-more-yaml",
     "title": "Hands-on #2: More YAML",
     "section": "",
-    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n\n\n  id      value category subcategory       date\n1  1  1.6211899        C           Z 2023-01-01\n2  2 -0.8935331        C           X 2023-01-02\n3  3  0.4356744        B           Z 2023-01-03\n4  4 -1.3527186        C           Y 2023-01-04\n5  5 -1.7616731        C           Z 2023-01-05\n6  6  0.7639748        B           X 2023-01-06"
+    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\n```{r}\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n```\n\n\n\n\n\n\n\n\n\n\n\nCode\n```{r}\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n```\n\n\n  id      value category subcategory       date\n1  1  2.0054081        B           X 2023-01-01\n2  2 -0.8580242        A           X 2023-01-02\n3  3  0.1842031        A           X 2023-01-03\n4  4  0.4365365        B           X 2023-01-04\n5  5 -0.3561057        A           X 2023-01-05\n6  6  0.7050632        B           Y 2023-01-06"
   }
 ]

@@ -260,19 +260,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb2-4"><a href="#cb2-4"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="in">library(palmerpenguins)</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="in">ggplot(penguins, </span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="in">       aes(x = flipper_length_mm, y = bill_length_mm)) +</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="in">  geom_point(aes(color = species, shape = species)) +</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="in">  scale_color_manual(values = c("darkorange","purple","cyan4")) +</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="in">  labs(</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="in">    title = "Flipper and bill length",</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="in">    subtitle = "Dimensions for penguins at Palmer Station LTER",</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="in">    x = "Flipper length (mm)", y = "Bill length (mm)",</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="in">    color = "Penguin species", shape = "Penguin species"</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="in">  ) +</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -285,32 +287,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Use this very loooong code line to test code-overflow options</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">value =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">category =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">subcategory =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">date =</span> <span class="fu">seq.Date</span>(<span class="at">from =</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>), <span class="at">by =</span> <span class="st">"day"</span>, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">head</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="in">## Use this very loooong code line to test code-overflow options</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="in">result &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c("A", "B", "C"), 100, replace = TRUE), subcategory = sample(c("X", "Y", "Z"), 100, replace = TRUE), date = seq.Date(from = as.Date("2023-01-01"), by = "day", length.out = 100))</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="in">head(result)</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id      value category subcategory       date
-1  1  1.6211899        C           Z 2023-01-01
-2  2 -0.8935331        C           X 2023-01-02
-3  3  0.4356744        B           Z 2023-01-03
-4  4 -1.3527186        C           Y 2023-01-04
-5  5 -1.7616731        C           Z 2023-01-05
-6  6  0.7639748        B           X 2023-01-06</code></pre>
+1  1  2.0054081        B           X 2023-01-01
+2  2 -0.8580242        A           X 2023-01-02
+3  3  0.1842031        A           X 2023-01-03
+4  4  0.4365365        B           X 2023-01-04
+5  5 -0.3561057        A           X 2023-01-05
+6  6  0.7050632        B           Y 2023-01-06</code></pre>
 </div>
 </div>
-<section id="this-is-a-heading-4" class="level4">
-<h4 class="anchored" data-anchor-id="this-is-a-heading-4">This is a heading 4</h4>
-<section id="this-is-a-heading-5" class="level5">
-<h5 class="anchored" data-anchor-id="this-is-a-heading-5">This is a heading 5</h5>
 
 
 <!-- -->
 
-</section>
-</section>
 </section>
 </section>
 
@@ -842,32 +840,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-54"><a href="#cb5-54"></a>You may copy the code chunk below into your document, so as to try out the code and execution-related settings.</span>
 <span id="cb5-55"><a href="#cb5-55"></a></span>
 <span id="cb5-58"><a href="#cb5-58"></a><span class="in">```{r}</span></span>
-<span id="cb5-59"><a href="#cb5-59"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb5-60"><a href="#cb5-60"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb5-61"><a href="#cb5-61"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb5-62"><a href="#cb5-62"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb5-63"><a href="#cb5-63"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb5-64"><a href="#cb5-64"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb5-65"><a href="#cb5-65"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-66"><a href="#cb5-66"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
-<span id="cb5-67"><a href="#cb5-67"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
-<span id="cb5-68"><a href="#cb5-68"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb5-69"><a href="#cb5-69"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
-<span id="cb5-70"><a href="#cb5-70"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-71"><a href="#cb5-71"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb5-72"><a href="#cb5-72"></a><span class="in">```</span></span>
-<span id="cb5-73"><a href="#cb5-73"></a></span>
-<span id="cb5-76"><a href="#cb5-76"></a><span class="in">```{r}</span></span>
-<span id="cb5-77"><a href="#cb5-77"></a><span class="do">## Use this very loooong code line to test code-overflow options</span></span>
-<span id="cb5-78"><a href="#cb5-78"></a></span>
-<span id="cb5-79"><a href="#cb5-79"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">value =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">category =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">subcategory =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">date =</span> <span class="fu">seq.Date</span>(<span class="at">from =</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>), <span class="at">by =</span> <span class="st">"day"</span>, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
-<span id="cb5-80"><a href="#cb5-80"></a></span>
-<span id="cb5-81"><a href="#cb5-81"></a><span class="fu">head</span>(result)</span>
-<span id="cb5-82"><a href="#cb5-82"></a><span class="in">```</span></span>
+<span id="cb5-59"><a href="#cb5-59"></a><span class="co">#| echo: fenced</span></span>
+<span id="cb5-60"><a href="#cb5-60"></a></span>
+<span id="cb5-61"><a href="#cb5-61"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-62"><a href="#cb5-62"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb5-63"><a href="#cb5-63"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb5-64"><a href="#cb5-64"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb5-65"><a href="#cb5-65"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb5-66"><a href="#cb5-66"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb5-67"><a href="#cb5-67"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-68"><a href="#cb5-68"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
+<span id="cb5-69"><a href="#cb5-69"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
+<span id="cb5-70"><a href="#cb5-70"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb5-71"><a href="#cb5-71"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
+<span id="cb5-72"><a href="#cb5-72"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-73"><a href="#cb5-73"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb5-74"><a href="#cb5-74"></a><span class="in">```</span></span>
+<span id="cb5-75"><a href="#cb5-75"></a></span>
+<span id="cb5-78"><a href="#cb5-78"></a><span class="in">```{r}</span></span>
+<span id="cb5-79"><a href="#cb5-79"></a><span class="co">#| echo: fenced</span></span>
+<span id="cb5-80"><a href="#cb5-80"></a><span class="do">## Use this very loooong code line to test code-overflow options</span></span>
+<span id="cb5-81"><a href="#cb5-81"></a></span>
+<span id="cb5-82"><a href="#cb5-82"></a>result <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">value =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="at">category =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">subcategory =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">date =</span> <span class="fu">seq.Date</span>(<span class="at">from =</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>), <span class="at">by =</span> <span class="st">"day"</span>, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
 <span id="cb5-83"><a href="#cb5-83"></a></span>
-<span id="cb5-84"><a href="#cb5-84"></a><span class="fu">#### This is a heading 4</span></span>
-<span id="cb5-85"><a href="#cb5-85"></a></span>
-<span id="cb5-86"><a href="#cb5-86"></a><span class="fu">##### This is a heading 5</span></span>
+<span id="cb5-84"><a href="#cb5-84"></a><span class="fu">head</span>(result)</span>
+<span id="cb5-85"><a href="#cb5-85"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

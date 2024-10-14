@@ -189,8 +189,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hands-on-markdown-basics" id="toc-hands-on-markdown-basics" class="nav-link" data-scroll-target="#hands-on-markdown-basics">Hands-on: Markdown Basics</a>
   <ul class="collapse">
   <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions:</a></li>
+  <li><a href="#markdown-source-for-sample-report" id="toc-markdown-source-for-sample-report" class="nav-link" data-scroll-target="#markdown-source-for-sample-report">Markdown Source for Sample Report</a></li>
   </ul></li>
-  <li><a href="#sample-report" id="toc-sample-report" class="nav-link" data-scroll-target="#sample-report">Sample Report</a></li>
   </ul>
 </nav>
     </div>
@@ -239,9 +239,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>my-quarto-project.qmd</code> is automatically open, and this is your first Quarto document!</p>
 <p><img src="images/clipboard-299694102.png" class="img-fluid"></p></li>
 <li><p><strong>Update YAML header</strong>: title, author, date and set format to html <code>format: html</code></p></li>
-<li><p><strong>Use <em>visual editor</em> OR <em>markdown editor</em> to add headings</strong> - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor</p></li>
-<li><p>Add some text in bold or italics</p></li>
-<li><p>Render the document using the <code>Render</code> button</p></li>
+<li><p><strong>Familiarize yourself with the <code>Visual editor</code> and the <code>Source editor</code></strong> - What’s the difference?</p></li>
+<li><p>Add some headings</p></li>
+<li><p>Add some text in bold or italics.</p></li>
+<li><p>Render the document using the <code>Render</code> button.</p></li>
 </ol>
 </section>
 </section>
@@ -266,31 +267,38 @@ Tip
 <p>Hint: Use the syntax <code>![caption](path_to_image)</code>. For example, <code>![Elephant](elephant.png)</code></p>
 </div>
 </div></li>
-<li><p>Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).</p></li>
 <li><p>Render the document to see the output.</p></li>
 </ol>
 </section>
-</section>
-<section id="sample-report" class="level2">
-<h2 class="anchored" data-anchor-id="sample-report">Sample Report</h2>
-<p>Feel free to make use of this sample report and try recreating it in your First Quarto Document!</p>
-<section id="research-question" class="level4">
-<h4 class="anchored" data-anchor-id="research-question">Research Question</h4>
-<p>Do cats prefer window seats or cozy corners in cat cafés?</p>
-</section>
-<section id="data-collection" class="level4">
-<h4 class="anchored" data-anchor-id="data-collection">Data Collection</h4>
-<p>We observed 50 cats in 5 different cat cafés. We recorded:</p>
-<p>- Cat’s choice of spot (window or corner)</p>
-<p>- Cat’s age (young, adult, senior)</p>
-<p>- Time of day (morning, afternoon, evening)</p>
-</section>
-<section id="analysis" class="level4">
-<h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
+<section id="markdown-source-for-sample-report" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-source-for-sample-report">Markdown Source for Sample Report</h3>
+<pre><code>## Sample Report
+
+Feel free to make use of this sample report and try recreating it in your First Quarto Document!
+
+### Research Question
+
+Do cats prefer window seats or cozy corners in cat cafés?
+
+### Data Collection
+
+We observed 50 cats in 5 different cat cafés. We recorded:
+
+- Cat's choice of spot (window or corner)
+
+- Cat's age (young, adult, senior)
+
+- Time of day (morning, afternoon, evening)
+
+### Analysis
+
+#### Creating a bar chart</code></pre>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple pie chart</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cat_spots <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">window =</span> <span class="dv">30</span>, <span class="at">corner =</span> <span class="dv">20</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(cat_spots, <span class="at">main=</span><span class="st">"Cat's Favorite Spots"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Create a simple pie chart</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">cat_spots &lt;- c(window = 30, corner = 20)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">pie(cat_spots, main="Cat's Favorite Spots")</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

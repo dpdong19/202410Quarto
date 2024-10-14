@@ -810,7 +810,7 @@ This is a sentence with some **bold text**.</code></pre>
 <section id="lets-try-this-together" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>Create your first Quarto document.</p>
-<p>Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
+<p>Follow instructions at the course website here: <a href="https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#instructions" class="uri">https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#instructions</a></p>
 </section>
 <section id="anatomy-of-a-quarto-document-1" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
@@ -911,7 +911,7 @@ This is a sentence with some **bold text**.</code></pre>
 <h2>Images from web</h2>
 <p>Images can be embedded using the following syntax: <code>![caption](image url)</code>.</p>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Source</a></li><li><a href="#tabset-2-2">Output</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <pre><code>![Quarto Logo](https://quarto.org/quarto.png)</code></pre>
@@ -930,7 +930,7 @@ This is a sentence with some **bold text**.</code></pre>
 <section id="images-from-local-directory" class="slide level2 smaller">
 <h2>Images from local directory</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Output</a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Source</a></li><li><a href="#tabset-3-2">Output</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <pre><code>![Elephant](images/elephant.png)</code></pre>
@@ -949,7 +949,7 @@ This is a sentence with some **bold text**.</code></pre>
 <section id="lets-try-this-together-1" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>Adding lists, links and images to your Quarto document.</p>
-<p>Follow instructions for <code>Hands-on #2</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
+<p>Follow instructions at the course website: <a href="https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#hands-on-markdown-basics" class="uri">https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#hands-on-markdown-basics</a></p>
 </section>
 
 <section>
@@ -980,30 +980,23 @@ format: html
 <pre><code>## Heading 1
 This is a sentence with some **bold text**.</code></pre>
 </section>
-<section id="inline-code" class="slide level2">
-<h2>Inline code</h2>
+<section id="inline-code-non-executable" class="slide level2">
+<h2>Inline code (non-executable)</h2>
 <p>Use single backticks to format text to look like code</p>
-<p><strong>Code</strong></p>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Source</a></li><li><a href="#tabset-4-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
 <pre><code>Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`</code></pre>
-<p><strong>Output</strong> Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
-<p>This helps with visual distinction and readability.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>If your inline code contains a backtick, use double backticks!</p>
-<pre><code>For example, the markdown source for \ ` * is 
-`` \ ` * ``</code></pre>
+<div id="tabset-4-2">
+<p>Follow instructions for <code>Hands-on #1</code> at file path: <code>01-quarto-basics/basics.qmd</code></p>
 </div>
 </div>
 </div>
 
 <aside><div>
+<p>If you want to show text containing a backtick using inline code format (for which the backtick will interfere with the formatting), use double backticks `` to surround your text.</p>
 <p>Do you know that inline code can be executable as well?</p>
 </div></aside></section>
 <section id="escaping-characters" class="slide level2">
@@ -1014,8 +1007,8 @@ This is a sentence with some **bold text**.</code></pre>
 <li><p>example: <code>\\\*</code> in markdown source will be displayed as <strong>\*</strong></p></li>
 </ul>
 </section>
-<section id="adding-code-chunks-to-your-document" class="slide level2">
-<h2>Adding code chunks to your document</h2>
+<section id="adding-non-executable-code-chunks-to-your-document" class="slide level2">
+<h2>Adding non-executable code chunks to your document</h2>
 <p>Use <strong>three backticks</strong> (now this is getting confusing) to create a <strong><em>fenced code block</em></strong> in your Quarto document</p>
 <pre><code>```
 ## You may write some code (non executable) here
@@ -1030,7 +1023,7 @@ This is a sentence with some **bold text**.</code></pre>
 <ul>
 <li>Use curly braces with language: ```{r}</li>
 <li>Allows for code execution in supported languages</li>
-<li>You will learn more about <strong>code chunk options</strong> for output control</li>
+<li>You will learn more about <strong>code chunk options</strong> for output control at the next session</li>
 </ul>
 </section>
 <section id="more-yaml" class="slide level2">
@@ -1045,7 +1038,7 @@ format:
     code-fold: true
 ---</code></pre>
 </div><div class="column" style="width:50%;">
-<p><strong>More Document Options in YAML:</strong></p>
+<p><strong>What else can you do with YAML document options?</strong></p>
 <ul>
 <li><p>Table of Contents</p></li>
 <li><p>Styling (making things pretty)</p></li>
@@ -1087,7 +1080,7 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <section id="lets-try-this-together-2" class="title-slide slide level1 center">
 <h1>Let’s try this together!</h1>
 <p>More YAML options and rendering.</p>
-<p>Follow instructions at file path: <code>01-quarto-basics/02-YAML.qmd</code></p>
+<p>Follow instructions at course website: <a href="https://dpdong19.github.io/202410Quarto/hands-on/02-YAML.html" class="uri">https://dpdong19.github.io/202410Quarto/hands-on/02-YAML.html</a></p>
 </section>
 <section id="figures" class="slide level2">
 <h2>Figures</h2>
@@ -1172,14 +1165,14 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <li>use <code>@</code> to reference the figure</li>
 </ul>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Code</a></li><li><a href="#tabset-4-2">Output</a></li></ul>
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Code</a></li><li><a href="#tabset-5-2">Output</a></li></ul>
 <div class="tab-content">
-<div id="tabset-4-1">
+<div id="tabset-5-1">
 <pre><code>![An Elephant](elephant.png){#fig-elephant}
 
 Refer to @fig-elephant for an illustration of an elephant. </code></pre>
 </div>
-<div id="tabset-4-2">
+<div id="tabset-5-2">
 <div id="fig-elephant" class="quarto-float quarto-figure quarto-figure-left" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1297,9 +1290,9 @@ Figure&nbsp;1: An Elephant
 <section id="table-caption" class="slide level2">
 <h2>Table Caption</h2>
 <div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Markdown</a></li><li><a href="#tabset-5-2">Output</a></li></ul>
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Markdown</a></li><li><a href="#tabset-6-2">Output</a></li></ul>
 <div class="tab-content">
-<div id="tabset-5-1">
+<div id="tabset-6-1">
 <pre><code>| fruit  | price  |
 |--------|--------|
 | apple  | 2.05   |
@@ -1308,7 +1301,7 @@ Figure&nbsp;1: An Elephant
 
 : Fruit prices</code></pre>
 </div>
-<div id="tabset-5-2">
+<div id="tabset-6-2">
 <table class="caption-top">
 <caption>Fruit prices</caption>
 <thead>
@@ -1339,9 +1332,9 @@ Figure&nbsp;1: An Elephant
 <section id="table-attributes" class="slide level2">
 <h2>Table Attributes</h2>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Markdown</a></li><li><a href="#tabset-6-2">Output</a></li></ul>
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Markdown</a></li><li><a href="#tabset-7-2">Output</a></li></ul>
 <div class="tab-content">
-<div id="tabset-6-1">
+<div id="tabset-7-1">
 <pre><code>| fruit  | price  |
 |--------|--------|
 | apple  | 2.05   |
@@ -1350,7 +1343,7 @@ Figure&nbsp;1: An Elephant
 
 : Fruit prices {tbl-colwidths="[10,90]"}</code></pre>
 </div>
-<div id="tabset-6-2">
+<div id="tabset-7-2">
 <table class="caption-top">
 <caption>Fruit prices</caption>
 <colgroup>
@@ -1386,9 +1379,9 @@ Figure&nbsp;1: An Elephant
 <h2>Creating tables from R code chunk outputs</h2>
 <p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb37-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
-<span id="cb37-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb36-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb36-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
@@ -1850,44 +1843,6 @@ Alternatively, use the Quarto Visual Editor!
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
