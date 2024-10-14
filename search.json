@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "",
+    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
+  },
+  {
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "",
+    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
+  },
+  {
+    "objectID": "index.html#lesson-objectives",
+    "href": "index.html#lesson-objectives",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nUnderstand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.\nLearn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.\nGain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.\n\n\n\n\n\n\n\nNote\n\n\n\nPrior experience with R is highly recommended for this course."
+  },
+  {
+    "objectID": "index.html#pre-session-preparation",
+    "href": "index.html#pre-session-preparation",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "Pre-session Preparation",
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55\n\nDownload the hands-on exercises, which will be copied into your project folder during the lesson.\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\"))\nYou’re ready to go! You can close Rstudio for now and see you soon!"
+  },
+  {
     "objectID": "session-01.html#about-this-workshop",
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
@@ -508,33 +536,5 @@
     "crumbs": [
       "Getting Started with Quarto"
     ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
-    "section": "",
-    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
-  },
-  {
-    "objectID": "index.html#about-this-course",
-    "href": "index.html#about-this-course",
-    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
-    "section": "",
-    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
-  },
-  {
-    "objectID": "index.html#lesson-objectives",
-    "href": "index.html#lesson-objectives",
-    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
-    "section": "Lesson Objectives",
-    "text": "Lesson Objectives\n\nUnderstand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.\nLearn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.\nGain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.\n\n\n\n\n\n\n\nNote\n\n\n\nPrior experience with R is highly recommended for this course."
-  },
-  {
-    "objectID": "index.html#pre-session-preparation",
-    "href": "index.html#pre-session-preparation",
-    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
-    "section": "Pre-session Preparation",
-    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55\n\nDownload the hands-on exercises, which will be copied into your project folder during the lesson.\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\"))\nYou’re ready to go! You can close Rstudio for now and see you soon!"
   }
 ]
