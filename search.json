@@ -567,14 +567,14 @@
     "href": "hands-on/01-basics.html",
     "title": "Hands-on #1: Basics",
     "section": "",
-    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
   },
   {
-    "objectID": "hands-on/01-basics.html#hands-on-your-first-quarto-document",
-    "href": "hands-on/01-basics.html#hands-on-your-first-quarto-document",
+    "objectID": "hands-on/01-basics.html#hands-on-your-first-quarto-project",
+    "href": "hands-on/01-basics.html#hands-on-your-first-quarto-project",
     "title": "Hands-on #1: Basics",
     "section": "",
-    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+    "text": "Click on New Project–&gt; New Directory -&gt; Quarto Project to create a new Quarto Project.\n\nThis will initiate a new project space with 3 files: _quarto.yml, my-quarto-project.qmd and my-quarto-project.Rproj (file name will be the same as what you typed earlier on).\nmy-quarto-project.qmd is automatically open, and this is your first Quarto document!\n\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
   },
   {
     "objectID": "hands-on/01-basics.html#hands-on-markdown-basics",
