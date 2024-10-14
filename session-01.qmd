@@ -13,14 +13,14 @@ Hello!
 
 Let's get to know each other.
 
-*What is your role/field of work/research area? Where are you from and what brought you to FSCI?*
+*What is your role/field of work/research area? Are you familiar with RStudio or R Markdown?*
 
-*Are you familiar with RStudio or R Markdown? What do you want to learn from this workshop?*
+*What do you want to learn from this workshop?*
 
 ## About this Workshop
 
 -   Prior experience with R is highly recommended for this course
--   [Workshop Website](https://bellaratmelia.github.io/2024-fsci-quarto/) (built with Quarto)
+-   Workshop Website (built with Quarto)
     -   Pre-workshop setup instructions
     -   Workshop materials
     -   Lesson objectives and lesson plan

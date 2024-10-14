@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: _site
 
 website:
   title: "Try-it-together: Quarto Basics"
@@ -14,11 +13,14 @@ website:
     - id: materials
       title: "Materials"
       style: "docked"
-      # collapse-level: 2
+      collapse-level: 2
       contents: 
         - session-01.qmd
         - href: hands-on/202410Quarto-handout-part1.zip
           text: Hands-on Exercises
+execute:
+  freeze: auto
+
 format:
   html:
     theme: cosmo
@@ -35,8 +37,5 @@ format:
     logo: "images/smu logo.png"
     incremental: true
 
-
 editor: visual
 
-execute:
-  freeze: auto
