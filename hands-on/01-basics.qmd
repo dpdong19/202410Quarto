@@ -21,11 +21,13 @@ date: 2024-10-15
 
 2.  **Update YAML header**: title, author, date and set format to html `format: html`
 
-3.  **Use *visual editor* OR *markdown editor* to add headings** - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor
+3.  **Familiarize yourself with the `Visual editor` and the `Source editor`** - What's the difference?
 
-4.  Add some text in bold or italics
+4.  Add some headings
 
-5.  Render the document using the `Render` button
+5.  Add some text in bold or italics.
+
+6.  Render the document using the `Render` button.
 
 ## Hands-on: Markdown Basics
 
@@ -41,31 +43,36 @@ date: 2024-10-15
     Hint: Use the syntax `![caption](path_to_image)`. For example, `![Elephant](elephant.png)`
     :::
 
-4.  Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).
+4.  Render the document to see the output.
 
-5.  Render the document to see the output.
+### Markdown Source for Sample Report
 
+```         
 ## Sample Report
 
 Feel free to make use of this sample report and try recreating it in your First Quarto Document!
 
-#### Research Question
+### Research Question
 
 Do cats prefer window seats or cozy corners in cat cafés?
 
-#### Data Collection
+### Data Collection
 
 We observed 50 cats in 5 different cat cafés. We recorded:
 
-\- Cat's choice of spot (window or corner)
+- Cat's choice of spot (window or corner)
 
-\- Cat's age (young, adult, senior)
+- Cat's age (young, adult, senior)
 
-\- Time of day (morning, afternoon, evening)
+- Time of day (morning, afternoon, evening)
 
-#### Analysis
+### Analysis
+
+#### Creating a bar chart
+```
 
 ```{r}
+#| echo: fenced
 
 # Create a simple pie chart
 cat_spots <- c(window = 30, corner = 20)

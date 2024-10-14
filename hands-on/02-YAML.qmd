@@ -78,6 +78,3 @@ result <- data.frame(id = 1:100, value = rnorm(100), category = sample(c("A", "B
 head(result)
 ```
 
-#### This is a heading 4
-
-##### This is a heading 5

@@ -26,16 +26,16 @@ Let's get to know each other.
     -   Lesson objectives and lesson plan
 
 ::: callout-note
-If you need help at any time, please raise your hand. 
+If you need help at any time, please raise your hand.
 :::
 
 ## Learning Objectives
 
 By the end of the session, participants will be able to:
 
-1. Understand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.
-2. Learn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.
-3. Gain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.
+1.  Understand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.
+2.  Learn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.
+3.  Gain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.
 
 ## Outline for today
 
@@ -171,7 +171,6 @@ quarto render document.ipynb
 Note: `Knitr` is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.
 :::
 
-
 ## Anatomy of a Quarto document
 
 -   **Metadata (YAML)**
@@ -294,7 +293,7 @@ To create a paragraph, type `Enter` twice.
 
 Create your first Quarto document.
 
-Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
+Follow instructions at the course website here: <https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#instructions>
 
 ## Anatomy of a Quarto document
 
@@ -403,7 +402,7 @@ This is a sentence with some **bold text**.
 Images can be embedded using the following syntax: `![caption](image url)`.
 
 ::: panel-tabset
-### Code
+### Source
 
 ```         
 ![Quarto Logo](https://quarto.org/quarto.png)
@@ -417,7 +416,7 @@ Images can be embedded using the following syntax: `![caption](image url)`.
 ## Images from local directory {.smaller}
 
 ::: panel-tabset
-### Code
+### Source
 
 ```         
 ![Elephant](images/elephant.png)
@@ -432,7 +431,7 @@ Images can be embedded using the following syntax: `![caption](image url)`.
 
 Adding lists, links and images to your Quarto document.
 
-Follow instructions for `Hands-on #2` at file path: `01-quarto-basics/basics.qmd`
+Follow instructions at the course website: <https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html#hands-on-markdown-basics>
 
 # Break (10 min)
 
@@ -464,30 +463,27 @@ mtcars %>%
 This is a sentence with some **bold text**.
 ```
 
-## Inline code
+## Inline code (non-executable)
 
 Use single backticks to format text to look like code
 
-**Code**
+::: panel-tabset
+
+### Source
 
 ```         
 Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
 ```
 
-**Output** Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
+### Output
 
-This helps with visual distinction and readability.
-
-::: callout-note
-If your inline code contains a backtick, use double backticks!
-
-```         
-For example, the markdown source for \ ` * is 
-`` \ ` * ``
-```
+Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`
 :::
 
 ::: aside
+
+If you want to show text containing a backtick using inline code format (for which the backtick will interfere with the formatting), use double backticks \`\` to surround your text.
+
 Do you know that inline code can be executable as well?
 :::
 
@@ -499,7 +495,7 @@ Do you know that inline code can be executable as well?
 
 -   example: `\\\*` in markdown source will be displayed as **\\\***
 
-## Adding code chunks to your document
+## Adding non-executable code chunks to your document
 
 Use **three backticks** (now this is getting confusing) to create a ***fenced code block*** in your Quarto document
 
@@ -517,7 +513,7 @@ Use **three backticks** (now this is getting confusing) to create a ***fenced co
 
 -   Use curly braces with language: \`\`\`{r}
 -   Allows for code execution in supported languages
--   You will learn more about **code chunk options** for output control
+-   You will learn more about **code chunk options** for output control at the next session
 
 ## More YAML
 
@@ -535,7 +531,7 @@ format:
 :::
 
 ::: {.column .nonincremental width="50%"}
-**More Document Options in YAML:**
+**What else can you do with YAML document options?**
 
 -   Table of Contents
 
@@ -575,7 +571,7 @@ quarto_render("document.qmd", output_format = "pdf")
 
 More YAML options and rendering.
 
-Follow instructions at file path: `01-quarto-basics/02-YAML.qmd`
+Follow instructions at course website: <https://dpdong19.github.io/202410Quarto/hands-on/02-YAML.html>
 
 ## Figures
 
