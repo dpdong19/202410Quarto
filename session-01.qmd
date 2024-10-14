@@ -468,7 +468,6 @@ This is a sentence with some **bold text**.
 Use single backticks to format text to look like code
 
 ::: panel-tabset
-
 ### Source
 
 ```         
@@ -481,7 +480,6 @@ Follow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd
 :::
 
 ::: aside
-
 If you want to show text containing a backtick using inline code format (for which the backtick will interfere with the formatting), use double backticks \`\` to surround your text.
 
 Do you know that inline code can be executable as well?
@@ -575,7 +573,9 @@ Follow instructions at course website: <https://dpdong19.github.io/202410Quarto/
 
 ## Figures
 
-Just now, we learned about adding images using this syntax `![Elephant](elephant.png)` This results in the following treatment for various output types: ![Example output for HTML, PDF and Word](images/05_figure_output.png){width="100%"}
+Just now, we learned about adding images using this syntax `![Elephant](elephant.png)` This results in the following treatment for various output types:
+
+![Example output for HTML, PDF and Word](images/05_figure_output.png){width="100%"}
 
 ## Figures: Display size
 
@@ -609,6 +609,10 @@ Figure captions are left-aligned by default to accommodate longer captions (whic
 
 ## Figures: Alignment
 
+```         
+![Elephant](images/elephant.png){width="300" fig-align="left"}
+```
+
 ![Elephant](images/elephant.png){width="300" fig-align="left"}
 
 ## Figures: Alt Text
@@ -622,6 +626,8 @@ Figure captions are left-aligned by default to accommodate longer captions (whic
 To combine the above attributes, separate arguments by a space, for example:
 
 `![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}`
+
+![](images/elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width="20%"}
 
 ## Cross-reference a figure in your document
 
@@ -847,3 +853,7 @@ Follow instructions at `01-quarto-basics/03a-figures-tables.qmd`
 -   Lists, links and images
 -   More YAML options
 -   Figures, tables and cross-references
+
+# One Up One Down
+
+Please tell us one thing you liked about the course and one area of improvement using this [shared document](https://docs.google.com/document/d/1oYT18UdqY4hjNhkqvWA9w9sw7Cmlg6H2VrGgSvtq5mc/edit?usp=sharing).
