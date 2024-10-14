@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Try-it-together: Quarto Basics"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - sidebar:materials
+      
+  sidebar:
+    - id: materials
+      title: "Materials"
+      style: "docked"
+      # collapse-level: 2
+      contents: 
+        - session-01.qmd
+        - href: hands-on/202410Quarto-handout-part1.zip
+          text: Hands-on Exercises
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
+execute:
+  freeze: auto
