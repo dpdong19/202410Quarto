@@ -1084,8 +1084,9 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 </section>
 <section id="figures" class="slide level2">
 <h2>Figures</h2>
-<p>Just now, we learned about adding images using this syntax <code>![Elephant](elephant.png)</code> This results in the following treatment for various output types: <img data-src="images/05_figure_output.png" style="width:100.0%" alt="Example output for HTML, PDF and Word"></p>
-</section>
+<p>Just now, we learned about adding images using this syntax <code>![Elephant](elephant.png)</code> This results in the following treatment for various output types:</p>
+
+<img data-src="images/05_figure_output.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Example output for HTML, PDF and Word</p></section>
 <section id="figures-display-size" class="slide level2">
 <h2>Figures: Display size</h2>
 <ul>
@@ -1144,6 +1145,7 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <img data-src="images/elephant.png" class="r-stretch quarto-figure-center"><p class="caption">Elephant</p></section>
 <section id="figures-alignment-1" class="slide level2">
 <h2>Figures: Alignment</h2>
+<pre><code>![Elephant](images/elephant.png){width="300" fig-align="left"}</code></pre>
 
 <img data-src="images/elephant.png" width="300" class="r-stretch quarto-figure-left"><p class="caption">Elephant</p></section>
 <section id="figures-alt-text" class="slide level2">
@@ -1157,7 +1159,8 @@ quarto_render("document.qmd", output_format = "pdf")</code></pre>
 <h2>Figures: Applying multiple parameters</h2>
 <p>To combine the above attributes, separate arguments by a space, for example:</p>
 <p><code>![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}</code></p>
-</section>
+
+<img data-src="images/elephant.png" class="quarto-figure quarto-figure-left r-stretch" style="width:20.0%" alt="A drawing of an elephant."></section>
 <section id="cross-reference-a-figure-in-your-document" class="slide level2">
 <h2>Cross-reference a figure in your document</h2>
 <ul>
@@ -1379,9 +1382,9 @@ Figure&nbsp;1: An Elephant
 <h2>Creating tables from R code chunk outputs</h2>
 <p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb36-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
-<span id="cb36-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb37-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb37-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>
@@ -1625,6 +1628,11 @@ Alternatively, use the Quarto Visual Editor!
 <li>More YAML options</li>
 <li>Figures, tables and cross-references</li>
 </ul>
+</section>
+
+<section id="one-up-one-down" class="title-slide slide level1 center">
+<h1>One Up One Down</h1>
+<p>Please tell us one thing you liked about the course and one area of improvement using this <a href="https://docs.google.com/document/d/1oYT18UdqY4hjNhkqvWA9w9sw7Cmlg6H2VrGgSvtq5mc/edit?usp=sharing">shared document</a>.</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/smu logo.png" class="slide-logo"></p>
@@ -1843,6 +1851,44 @@ Alternatively, use the Quarto Visual Editor!
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

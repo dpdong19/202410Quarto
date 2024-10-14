@@ -387,7 +387,7 @@
     "href": "session-01.html#figures",
     "title": "Getting Started with Quarto",
     "section": "Figures",
-    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:",
+    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:\n\nExample output for HTML, PDF and Word",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -417,7 +417,7 @@
     "href": "session-01.html#figures-alignment-1",
     "title": "Getting Started with Quarto",
     "section": "Figures: Alignment",
-    "text": "Figures: Alignment\n\nElephant",
+    "text": "Figures: Alignment\n![Elephant](images/elephant.png){width=\"300\" fig-align=\"left\"}\n\nElephant",
     "crumbs": [
       "Getting Started with Quarto"
     ]
