@@ -1,0 +1,83 @@
+---
+title: "Hands-on #2: More YAML"
+author: "Danping"
+date: 2024-07-30
+format:
+  html:
+    theme: default
+    highlight-style: "breeze"
+    code-line-numbers: true
+    warning: false
+    code-fold: show
+    code-tools: true
+    code-overflow: wrap
+---
+
+## Hands-on: More YAML
+
+### Instructions
+
+Use the Quarto document you created earlier, try different **YAML options** and **render** the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the [sample code chunk](#sample-code) below.
+
+**Table of Contents**
+
+-   Add your table of contents `toc: true`
+-   Change the depth of your Table of Contents, e.g. `toc-depth: 3`
+-   Type `number-sections` and click on `TAB` on your keyboard, What do you see? What does this YAML option do?
+-   Change to other format, e.g. `html, PDF, pptx, revealjs`. How does the layout change?
+
+**Look & Feel**
+
+-   Pick a [HTML theme](https://quarto.org/docs/output-formats/html-themes.html) at this link to be applied on your document, e.g. `theme: "quartz"`
+-   Render with terminal and Quarto console
+
+**Code & Execution**
+
+Try the YAML options below and find out what they do. Use `#` to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.
+
+```         
+    highlight-style: "breeze" #this is to change the code highlighting style
+    code-line-numbers: 
+    code-tools: 
+    code-fold:          #press TAB to see available options
+    code-overflow:      #press TAB to see available options
+    echo: false  # whether to show the code 
+    eval: true # whether to run the code 
+    warning:
+    error:
+```
+
+Check out more [highlighting styles](https://quarto.org/docs/output-formats/html-code.html#highlighting) here.
+
+### Sample Code {#sample-code}
+
+You may copy the code chunk below into your document, so as to try out the code and execution-related settings.
+
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+## Use this very loooong code line to test code-overflow options
+
+result <- data.frame(id = 1:100, value = rnorm(100), category = sample(c("A", "B", "C"), 100, replace = TRUE), subcategory = sample(c("X", "Y", "Z"), 100, replace = TRUE), date = seq.Date(from = as.Date("2023-01-01"), by = "day", length.out = 100))
+
+head(result)
+```
+
+#### This is a heading 4
+
+##### This is a heading 5

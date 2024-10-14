@@ -8,6 +8,12 @@ website:
       - href: index.qmd
         text: Home
       - sidebar:materials
+      - text: "Hands-on Exercises"   
+        menu:                        
+          - href: hands-on/01-basics.qmd
+          - href: hands-on/02-YAML.qmd
+          - href: hands-on/03a-figures-tables.qmd
+          - href: hands-on/03b-penguins.qmd
       
   sidebar:
     - id: materials
@@ -17,7 +23,7 @@ website:
       contents: 
         - session-01.qmd
         - href: hands-on/202410Quarto-handout-part1.zip
-          text: Hands-on Exercises
+          text: Download Hands-on Exercises
 execute:
   freeze: auto
 

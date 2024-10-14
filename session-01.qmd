@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Quarto"
-author: "Bella Ratmelia & Dong Danping"
+author: "Danping DONG & Bella RATMELIA"
 format:
   revealjs: 
     incremental: false
@@ -20,33 +20,22 @@ Let's get to know each other.
 ## About this Workshop
 
 -   Prior experience with R is highly recommended for this course
--   Workshop Website (built with Quarto)
+-   [Workshop Website](https://dpdong19.github.io/202410Quarto) (built with Quarto)
     -   Pre-workshop setup instructions
     -   Workshop materials
     -   Lesson objectives and lesson plan
 
-::: aside
-If you need help at any time, please let one of the instructors know.
+::: callout-note
+If you need help at any time, please raise your hand. 
 :::
 
 ## Learning Objectives
 
 By the end of the session, participants will be able to:
 
-1.  Describe how Quarto can enhance transparency in scientific and technical publishing.
-
-2.  Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.
-
-3.  Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.
-
-4.  Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.
-
-## Setup and Instructions
-
-1.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of R
-2.  [Download](https://posit.co/download/rstudio-desktop/) and install the latest version of RStudio
-3.  [Download](https://quarto.org/docs/download/index.html) and install the latest version of Quarto
-4.  Clone the GitHub repository from `https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git` and installed the required packages - Refer to [instructions](https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation)
+1. Understand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.
+2. Learn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.
+3. Gain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.
 
 ## Outline for today
 
@@ -178,30 +167,10 @@ quarto render document.ipynb
 -   Install the `reticulate` package to seamlessly integrate Python code chunks in Quarto `install.packages("reticulate")`
 -   When you use a Python chunk in a Quarto document, `knitr` uses `reticulate` to execute the Python code
 
-::: aside
+::: callout-note
 Note: `Knitr` is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.
 :::
 
-------------------------------------------------------------------------
-
-``` python
-#| label: cat-ages
-#| echo: true
-#| execution: false
-
-# Dictionary of cats and their ages
-cat_ages = {
-    "Whiskers": 3,
-    "Mittens": 5,
-    "Ginger": 2,
-    "Luna": 4,
-    "Oreo": 1
-}
-
-# Calculate average age
-average_age = sum(cat_ages.values()) / len(cat_ages)
-print(f"Average age of cats: {average_age:.1f} years")
-```
 
 ## Anatomy of a Quarto document
 

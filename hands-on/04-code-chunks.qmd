@@ -1,0 +1,191 @@
+---
+title: "Exploring code chunks and code annotations"
+author: "Bella"
+format: html
+---
+
+## Hands-on: Exploring code chunks
+
+### Part 1: Code Chunks
+
+Amend the header of the following code chunks to fit their description. Below is a list of possible header options (not exhaustive). If you are using visual editor, RStudio will have auto-complete suggestions for values for each option.
+
+-   `echo`
+
+-   `label`
+
+-   `eval`
+
+-   `include`
+
+-   `output`
+
+-   `warning`
+
+-   `message`
+
+-   `error`
+
+-   `cache`
+
+-   `fig-width`
+
+-   `fig-height`
+
+-   `fig-cap`
+
+-   `fig-alt`
+
+-   `fig-align`
+
+-   `out-width`
+
+-   `out-height`
+
+-   `layout`
+
+-   `layout-ncol`
+
+-   `layout-nrow`
+
+-   `column`
+
+-   `code-fold`
+
+-   `code-summary`
+
+-   `code-overflow`
+
+-   `code-line-numbers`
+
+-   `execution-count`
+
+-   `tbl-cap`
+
+-   `tbl-colwidths`
+
+-   `df-print`
+
+-   `comments`
+
+-   `engine`
+
+-   `results`
+
+-   `collapse`
+
+**Chunk 1: Give the chunk below a label called "basic-chunk"**
+
+```{r}
+
+# Create a simple data frame
+df <- data.frame(
+  x = 1:5,
+  y = c(2, 4, 6, 8, 10)
+)
+print(df)
+```
+
+**Chunk 2: make this chunk hide output and show code:**
+
+```{r}
+#| label: hide-output
+
+# Calculate correlation
+cor_xy <- cor(df$x, df$y)
+print(paste("The correlation between x and y is:", cor_xy))
+```
+
+**Chunk 3: make this chunk show output, hide code:**
+
+```{r}
+#| label: hide-code
+
+# Calculate mean of y
+mean_y <- mean(df$y)
+print(paste("The mean of y is:", mean_y))
+```
+
+**Chunk 4: Change figure width to 6, figure height to 4, and give it a caption.**
+
+```{r}
+#| label: plot-options
+
+plot(df$x, df$y, main="Scatter Plot", xlab="X", ylab="Y")
+```
+
+**Chunk 5: Suppress warnings and messages**
+
+```{r}
+#| label: suppress-warnings
+
+library(dplyr)  # This usually prints a message
+
+# This operation usually gives a warning
+1:3 + 1:2
+```
+
+### Part 2: Code annotations
+
+1.  Convert the comments inside the code chunks below into annotations. Feel free to amend the comment to your liking if you think it's not descriptive enough to the audience.
+2.  Render the result to see how it looks like.
+
+**Chunk 6:**
+
+```{r}
+#| label: annotation-1
+
+numbers <- c(10, 20, 30, 40, 50) # create a number vector
+mean_value <- mean(numbers) #Calculate the average
+print(mean_value)
+```
+
+**Chunk 7:**
+
+```{r}
+#| label: data-manipulation
+
+library(dplyr) # load the dplyr library
+
+# Create a sample dataset
+df <- data.frame(
+  name = c("Alice", "Bob", "Charlie", "David"),
+  age = c(25, 30, 35, 28),
+  score = c(85, 92, 78, 95)
+)
+
+result <- df %>%
+  filter(age > 25) %>% # Keep only rows where age > 25
+  mutate(grade = case_when(
+    score >= 90 ~ "A",
+    score >= 80 ~ "B",
+    TRUE ~ "C"
+  )) %>% # Add a new column 'grade' based on score
+  arrange(desc(score)) # Sort by score in descending order
+
+print(result)
+```
+
+**Chunk 8:**
+
+```{r}
+#| label: plot-annotation
+
+library(ggplot2) # load the ggplot2 library
+
+ggplot(df, aes(x = age, y = score)) + # set the x and y axis
+  geom_point() + # Add scatter plot points
+  geom_smooth(method = "lm", se = FALSE) + # Add a linear regression line
+  labs(title = "Age vs Score", 
+       x = "Age", 
+       y = "Score") # Set plot labels
+```
+
+**Chunk 9:**
+
+```{r}
+#| label: annotation-2
+
+seq_numbers <- seq(1, 10, by = 2) # Create a sequence from 1 to 10, step 2
+print(seq_numbers) # print the sequence of number
+```

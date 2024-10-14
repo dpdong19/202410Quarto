@@ -1,0 +1,61 @@
+---
+title: "Hands-on #1: Basics"
+author: "Danping"
+format: html
+---
+
+## Hands-on: Your first Quarto document
+
+### Instructions
+
+1.  Click on `New File` –\> `Quarto Document` to create a blank `.qmd` file
+2.  **Update YAML header**: title, author, date and set format to html `format: html`
+3.  **Use *visual editor* OR *markdown editor* to add headings** - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor
+4.  Add some text in bold or italics
+5.  Render the document using the `Render` button
+
+## Hands-on: Markdown Basics
+
+### Instructions:
+
+1.  Add some **numbered list** and **non-numbered list**, using the *visual editor.* Switch back to the *markdown editor* and take note of the syntax. Try creating lists using codes as well.
+
+2.  Add a piece of text and **hyperlink** it to a URL.
+
+3.  Insert the **image** of a cat cafe into your report. The path to the image is `cat-cafe.jpg`
+
+    ::: callout-tip
+    Hint: Use the syntax `![caption](path_to_image)`. For example, `![Elephant](elephant.png)`
+    :::
+
+4.  Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).
+
+5.  Render the document to see the output.
+
+## Sample Report
+
+Feel free to make use of this sample report and try recreating it in your First Quarto Document!
+
+#### Research Question
+
+Do cats prefer window seats or cozy corners in cat cafés?
+
+#### Data Collection
+
+We observed 50 cats in 5 different cat cafés. We recorded:
+
+\- Cat's choice of spot (window or corner)
+
+\- Cat's age (young, adult, senior)
+
+\- Time of day (morning, afternoon, evening)
+
+#### Analysis
+
+```{r}
+
+# Create a simple pie chart
+cat_spots <- c(window = 30, corner = 20)
+pie(cat_spots, main="Cat's Favorite Spots")
+
+```

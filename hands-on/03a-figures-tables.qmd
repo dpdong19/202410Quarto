@@ -1,0 +1,59 @@
+---
+title: "Hands-on #3a: Figures, Tables and Cross-References"
+author: "Danping"
+format: 
+    html:
+        toc: true
+        toc-depth: 2
+---
+
+## Hands-on: Figures, tables and cross-references
+
+### Figures
+
+1.  Open the `03b-penguins.qmd` Quarto Document. At the top of the report about Penguins, add `adelie.jpg` with the following settings:
+    -   Size of the image should occupy 80% width of the content space
+
+    -   center-aligned
+
+    -   include alt text for accessibility
+
+    -   add a figure ID `#fig-adelie`
+2.  Write a paragraph at the end of the document, making reference to the figure `#fig-adelie`
+
+### Tables
+
+1.  Recreate the table below with a caption "Penguin Species Count". You may create the table using the visual editor (or if feel free to do it by hand if you prefer), and switch to source editor to observe how the source table is formatted.
+
+    ![](penguins_count.PNG)
+
+2.  Now, make the `Count` column right-aligned
+
+3.  Use the `knitr::kable()` function to format the table output from the code chunk below.
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+penguins %>% count(species) #take the penguins dataset from palmerpenguins package and count the number of each species
+```
+
+### Two-column Layout
+
+Create a two-column layout:
+
+-   In the left column, insert a figure with proper attributes
+
+-   In the right column, create a table with a caption
+
+### Bonus Question
+
+In the table below, what does `{.striped .hover}` do?
+
+| fruit  | price |
+|--------|-------|
+| apple  | 2.05  |
+| pear   | 1.37  |
+| orange | 3.09  |
+
+: Fruit prices {.striped .hover}
