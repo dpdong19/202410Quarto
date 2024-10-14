@@ -65,16 +65,16 @@ Essentially, literate programming is about:
 
 ### Example: eLife Reproducible Article
 
-![](images\02_reproducible_elife.PNG)
+![](images/02_reproducible_elife.PNG)
 
 ------------------------------------------------------------------------
 
 ### Example: eLife Reproducible Article
 
 ::: {layout-ncol="2"}
-[![A figure from the reproducible article](images\03a_elife_figure.PNG)](https://elifesciences.org/articles/30274/executable)
+[![A figure from the reproducible article](images/03a_elife_figure.PNG)](https://elifesciences.org/articles/30274/executable)
 
-[![The underlying live codes for the same figure](images\03b_elife_figure_code.PNG)](https://elifesciences.org/articles/30274/executable)
+[![The underlying live codes for the same figure](images/03b_elife_figure_code.PNG)](https://elifesciences.org/articles/30274/executable)
 :::
 
 ## Research Transparency & Reproducibility
@@ -141,7 +141,7 @@ A Quarto document (.qmd) is a plain text file that can be rendered to many diffe
 
 ## What can you do with Quarto?
 
-[![MS Word for office workflows](images/04_MS%20word.PNG){height="600"}](https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx)
+[![MS Word for office workflows](images/04_MS%20word.PNG){height="600" fig-align="left"}](https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx)
 
 ## What can you do with Quarto?
 
