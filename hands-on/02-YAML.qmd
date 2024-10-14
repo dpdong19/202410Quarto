@@ -54,6 +54,7 @@ Check out more [highlighting styles](https://quarto.org/docs/output-formats/html
 You may copy the code chunk below into your document, so as to try out the code and execution-related settings.
 
 ```{r}
+#| echo: fenced
 
 library(tidyverse)
 library(palmerpenguins)
@@ -71,6 +72,7 @@ ggplot(penguins,
 ```
 
 ```{r}
+#| echo: fenced
 ## Use this very loooong code line to test code-overflow options
 
 result <- data.frame(id = 1:100, value = rnorm(100), category = sample(c("A", "B", "C"), 100, replace = TRUE), subcategory = sample(c("X", "Y", "Z"), 100, replace = TRUE), date = seq.Date(from = as.Date("2023-01-01"), by = "day", length.out = 100))
