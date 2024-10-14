@@ -184,7 +184,7 @@ Note: `Knitr` is a dynamic report generation engine for R that executes code chu
 
 ------------------------------------------------------------------------
 
-```python
+``` python
 #| label: cat-ages
 #| echo: true
 #| execution: false
@@ -201,7 +201,6 @@ cat_ages = {
 # Calculate average age
 average_age = sum(cat_ages.values()) / len(cat_ages)
 print(f"Average age of cats: {average_age:.1f} years")
-
 ```
 
 ## Anatomy of a Quarto document

@@ -25,6 +25,17 @@ format:
     css: styles.css
     toc: true
 
+  revealjs: 
+    theme: [default, custom.scss]
+    width: 1920
+    height: 1080
+    slide-number: true
+    footer: "[Try-it-together: Getting Started with Quarto](https://dpdong19.github.io/202410Quarto/)"
+    chalkboard: false
+    logo: "images/smu logo.png"
+    incremental: true
+
+
 editor: visual
 
 execute:
