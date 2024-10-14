@@ -1,0 +1,540 @@
+[
+  {
+    "objectID": "session-01.html#about-this-workshop",
+    "href": "session-01.html#about-this-workshop",
+    "title": "Getting Started with Quarto",
+    "section": "About this Workshop",
+    "text": "About this Workshop\n\nPrior experience with R is highly recommended for this course\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#learning-objectives",
+    "href": "session-01.html#learning-objectives",
+    "title": "Getting Started with Quarto",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#setup-and-instructions",
+    "href": "session-01.html#setup-and-instructions",
+    "title": "Getting Started with Quarto",
+    "section": "Setup and Instructions",
+    "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git and installed the required packages - Refer to instructions",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#outline-for-today",
+    "href": "session-01.html#outline-for-today",
+    "title": "Getting Started with Quarto",
+    "section": "Outline for today",
+    "text": "Outline for today\n\nLiterate Programming and Reproducible Research\nIntroduction to Quarto\nMarkdown Basics\nYAML\nFigures, tables and cross references\n\n\n\n\n\n\n\nNote\n\n\nWe will have some hands-on, in between the ‘lectures’!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#literate-programming",
+    "href": "session-01.html#literate-programming",
+    "title": "Getting Started with Quarto",
+    "section": "Literate Programming",
+    "text": "Literate Programming\n\n“Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.”\n– Donald Knuth, 1984\n\nEssentially, literate programming is about:\n\nCreating code that is not only executable but also readable and understandable by humans\nWeaving code and documentation in a single document, emphasizing human-readable explanation alongside executable code",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#research-transparency-reproducibility",
+    "href": "session-01.html#research-transparency-reproducibility",
+    "title": "Getting Started with Quarto",
+    "section": "Research Transparency & Reproducibility",
+    "text": "Research Transparency & Reproducibility\n\nEnables researcher to provide clear, detailed descriptions of their methodologies, algorithms, and computational processes.\nThis integration ensures that the logic and rationale behind each part of the code are explicitly documented, making it easier for others to follow, reproduce, and validate the research.\nReduces ambiguities and potential misinterpretations, fostering a more robust and transparent scientific discourse.\n\nIn Quarto, this is enabled through code chunks - more details about this on the next session\n\nThese are some speaker notes",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#a-quick-overview-or-recap-of-r-r-studio",
+    "href": "session-01.html#a-quick-overview-or-recap-of-r-r-studio",
+    "title": "Getting Started with Quarto",
+    "section": "A Quick Overview or Recap of R & R Studio",
+    "text": "A Quick Overview or Recap of R & R Studio",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-is-quarto",
+    "href": "session-01.html#what-is-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\nQuarto is an open-source scientific and technical publishing system\nIt is the next-generation of R Markdown\nSupports multiple programming languages (R, Python, Julia)\nEnables the creation of dynamic and reproducible documents, reports, presentations and websites\n\n\n\nOur slides and workshop websites are all built with Quarto!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-does-a-quarto-document-look-like",
+    "href": "session-01.html#what-does-a-quarto-document-look-like",
+    "title": "Getting Started with Quarto",
+    "section": "What does a Quarto document look like?",
+    "text": "What does a Quarto document look like?",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-does-a-quarto-document-look-like-1",
+    "href": "session-01.html#what-does-a-quarto-document-look-like-1",
+    "title": "Getting Started with Quarto",
+    "section": "What does a Quarto document look like?",
+    "text": "What does a Quarto document look like?\nA Quarto document (.qmd) is a plain text file that can be rendered to many different formats, e.g. html, PDF, .docx",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#rendering-to-different-formats",
+    "href": "session-01.html#rendering-to-different-formats",
+    "title": "Getting Started with Quarto",
+    "section": "Rendering to different formats",
+    "text": "Rendering to different formats\n\nHTML reports and websites\nPDF reports\nMS Office Word\nPresentations (revealjs, Powerpoint, Beamer)\nBooks",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-can-you-do-with-quarto",
+    "href": "session-01.html#what-can-you-do-with-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "What can you do with Quarto?",
+    "text": "What can you do with Quarto?\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating html for web publishing\n\n\n\n\n\n\n\n\n\n\n\nGenerating reports in PDF",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-can-you-do-with-quarto-1",
+    "href": "session-01.html#what-can-you-do-with-quarto-1",
+    "title": "Getting Started with Quarto",
+    "section": "What can you do with Quarto?",
+    "text": "What can you do with Quarto?\n\n\n\nMS Word for office workflows",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-can-you-do-with-quarto-2",
+    "href": "session-01.html#what-can-you-do-with-quarto-2",
+    "title": "Getting Started with Quarto",
+    "section": "What can you do with Quarto?",
+    "text": "What can you do with Quarto?\nCreate dynamic presentations\nlike the one you’re seeing right now!\n\nand much more!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#quarto-is-more-than-just-r",
+    "href": "session-01.html#quarto-is-more-than-just-r",
+    "title": "Getting Started with Quarto",
+    "section": "Quarto is more than just R",
+    "text": "Quarto is more than just R\n\nQuarto supports R, Python, Julia, Observable and more\nQuarto can directly render Jupyter Notebooks (.ipynb) without conversion\n\nquarto render document.ipynb",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#executable-python-code-blocks-in-quarto",
+    "href": "session-01.html#executable-python-code-blocks-in-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "Executable Python code blocks in Quarto",
+    "text": "Executable Python code blocks in Quarto\n\nInstall the reticulate package to seamlessly integrate Python code chunks in Quarto install.packages(\"reticulate\")\nWhen you use a Python chunk in a Quarto document, knitr uses reticulate to execute the Python code\n\n\n\nNote: Knitr is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document",
+    "href": "session-01.html#anatomy-of-a-quarto-document",
+    "title": "Getting Started with Quarto",
+    "section": "Anatomy of a Quarto document",
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#what-is-yaml",
+    "href": "session-01.html#what-is-yaml",
+    "title": "Getting Started with Quarto",
+    "section": "What is YAML?",
+    "text": "What is YAML?\n\n\nQuarto documents begin with YAML (YAML Ain’t Markup Language) headers\nYAML specify document metadata and control settings which influences document rendering and final output in many different ways:\n\nTitle, author, date\nOutput format (HTML, PDF, Word, etc.)\nTable of contents settings\nBibliography and citation style\nAnd more!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#markdown-and-r-markdown",
+    "href": "session-01.html#markdown-and-r-markdown",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown and R Markdown",
+    "text": "Markdown and R Markdown\n\nMarkdown is the underlying document syntax for Quarto and R Markdown\nlightweight markup language, which uses plain text with simple syntax for easy text formatting\nwidely used for documentation, README files and web content\nRMarkdown is an extension of Markdown, developed by RStudio, which allows embedding of R code chunks within Markdown documents",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#markdown-basics-syntax",
+    "href": "session-01.html#markdown-basics-syntax",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown Basics: Syntax",
+    "text": "Markdown Basics: Syntax\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\n\n\nTip\n\n\nTo create a line break, you can use two spaces at the end of a line OR a backslash \\.\nTo create a paragraph, type Enter twice.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#markdown-basics---headings",
+    "href": "session-01.html#markdown-basics---headings",
+    "title": "Getting Started with Quarto",
+    "section": "Markdown Basics - Headings",
+    "text": "Markdown Basics - Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-1",
+    "href": "session-01.html#anatomy-of-a-quarto-document-1",
+    "title": "Getting Started with Quarto",
+    "section": "Anatomy of a Quarto document",
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#lists",
+    "href": "session-01.html#lists",
+    "title": "Getting Started with Quarto",
+    "section": "Lists",
+    "text": "Lists\n\nCodeOutput\n\n\n**Unordered List**\n\n-   item 1\n    -   sub-item 1\n    -   sub-item 2\n        -   sub-sub-item 1\n\n**Ordered List**\n\n1.  item 1\n2.  item 2\n    i)  sub-item 1\n        A.  sub-sub-item 1\n\n**Checkbox**\n\n-  [ ] Task 1 \n-  [x] Task 2\n\n\n\nUnordered List\n\nitem 1\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\nOrdered List\n\nitem 1\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\nCheckbox\n\nTask 1\nTask 2",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#links",
+    "href": "session-01.html#links",
+    "title": "Getting Started with Quarto",
+    "section": "Links",
+    "text": "Links\n\n\nMarkdown Syntax\n&lt;https://quarto.org&gt;\n[Quarto](https://quarto.org)\n\nOutput\nhttps://quarto.org\nQuarto",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#images-from-web",
+    "href": "session-01.html#images-from-web",
+    "title": "Getting Started with Quarto",
+    "section": "Images from web",
+    "text": "Images from web\nImages can be embedded using the following syntax: ![caption](image url).\n\nCodeOutput\n\n\n![Quarto Logo](https://quarto.org/quarto.png)\n\n\n\n\n\nQuarto Logo",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#images-from-local-directory",
+    "href": "session-01.html#images-from-local-directory",
+    "title": "Getting Started with Quarto",
+    "section": "Images from local directory",
+    "text": "Images from local directory\n\nCodeOutput\n\n\n![Elephant](images/elephant.png)\n\n\n\n\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#anatomy-of-a-quarto-document-2",
+    "href": "session-01.html#anatomy-of-a-quarto-document-2",
+    "title": "Getting Started with Quarto",
+    "section": "Anatomy of a Quarto document",
+    "text": "Anatomy of a Quarto document\n\nMetadata (YAML)\n\n---\nformat: html\n---\n\nCode\n\n\nlibrary(dplyr)\nmtcars %&gt;% \n  group_by(cyl) %&gt;%\n  summarize(mean = mean(mpg), .groups = \"drop\")\n\n\nText\n\n## Heading 1\nThis is a sentence with some **bold text**.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#inline-code",
+    "href": "session-01.html#inline-code",
+    "title": "Getting Started with Quarto",
+    "section": "Inline code",
+    "text": "Inline code\nUse single backticks to format text to look like code\nCode\nFollow instructions for `Hands-on #1` at file path: `01-quarto-basics/basics.qmd`\nOutput Follow instructions for Hands-on #1 at file path: 01-quarto-basics/basics.qmd\nThis helps with visual distinction and readability.\n\n\n\n\n\n\nNote\n\n\nIf your inline code contains a backtick, use double backticks!\nFor example, the markdown source for \\ ` * is \n`` \\ ` * ``\n\n\n\n\n\nDo you know that inline code can be executable as well?",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#escaping-characters",
+    "href": "session-01.html#escaping-characters",
+    "title": "Getting Started with Quarto",
+    "section": "Escaping Characters",
+    "text": "Escaping Characters\n\nSometimes, we need to display characters that have special meaning in Markdown, such as \\ ` *\nuse one backslash \\ to escape the character after it\nexample: \\\\\\* in markdown source will be displayed as \\*",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#adding-code-chunks-to-your-document",
+    "href": "session-01.html#adding-code-chunks-to-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Adding code chunks to your document",
+    "text": "Adding code chunks to your document\nUse three backticks (now this is getting confusing) to create a fenced code block in your Quarto document\n```\n## You may write some code (non executable) here\n```\n\nFenced code block is helpful to show multiple lines of code\neverything inside the ‘fences’ is treated literally as code or plain text, and not processed by Quarto",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#executable-code-chunks-in-quarto",
+    "href": "session-01.html#executable-code-chunks-in-quarto",
+    "title": "Getting Started with Quarto",
+    "section": "Executable Code Chunks in Quarto",
+    "text": "Executable Code Chunks in Quarto\n\nUse curly braces with language: ```{r}\nAllows for code execution in supported languages\nYou will learn more about code chunk options for output control",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#more-yaml",
+    "href": "session-01.html#more-yaml",
+    "title": "Getting Started with Quarto",
+    "section": "More YAML",
+    "text": "More YAML\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    toc: true\n    code-fold: true\n---\n\nMore Document Options in YAML:\n\nTable of Contents\nStyling (making things pretty)\nCode related settings\nReferences & Citation\n\n\n\n\n\n\n\n\nCaution\n\n\nProper indentation and spacing is very important for YAML! Typically, use 2 spaces to create a child-level YAML element and be consistent throughout the YAML section.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#rendering",
+    "href": "session-01.html#rendering",
+    "title": "Getting Started with Quarto",
+    "section": "Rendering",
+    "text": "Rendering\nBesides rendering with the RStudio button, you may also render via:\n\nTerminal or system shell:\n\nquarto render document.qmd # defaults to html\nquarto render document.qmd --to pdf\nquarto render document.qmd --to docx\n\nR console using quarto R package\n\nlibrary(quarto)\nquarto_render(\"document.qmd\") # defaults to html\nquarto_render(\"document.qmd\", output_format = \"pdf\")",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures",
+    "href": "session-01.html#figures",
+    "title": "Getting Started with Quarto",
+    "section": "Figures",
+    "text": "Figures\nJust now, we learned about adding images using this syntax ![Elephant](elephant.png) This results in the following treatment for various output types:",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-display-size",
+    "href": "session-01.html#figures-display-size",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Display size",
+    "text": "Figures: Display size\n\nChange display size by adding width and height attributes:\n![Elephant](elephant.png){width=300}\nDefault units are pixels. You can also specify sizes using a percentage:\n![Elephant](elephant.png){width=80%}\n\n\n\n\n\n\n\nNote\n\n\nIf only width or height is specified, the other will be calculated automatically\n\n\n\n\nthis is 80% of the container size, responsive design when the content area may change, consistent sizing across different devices, screen sizes and formats",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-alignment",
+    "href": "session-01.html#figures-alignment",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alignment",
+    "text": "Figures: Alignment\n\nFigures are centre-aligned by default. You may change alignment by doing this:\n![Elephant](elephant.png){fig-align=\"left\"}\n\n\n\n\n\n\n\nNote\n\n\nFigure captions are left-aligned by default to accommodate longer captions (which looks odd when center aligned)\n\n\n\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-alignment-1",
+    "href": "session-01.html#figures-alignment-1",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alignment",
+    "text": "Figures: Alignment\n\nElephant",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-alt-text",
+    "href": "session-01.html#figures-alt-text",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Alt Text",
+    "text": "Figures: Alt Text\n\nAlt Text is important for accessibility, aiding visually impaired users, enhancing SEO, and providing context when images fail to load\n\n![](elephant.png){fig-alt=\"A line drawing of an elephant.\"}",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-applying-multiple-parameters",
+    "href": "session-01.html#figures-applying-multiple-parameters",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Applying multiple parameters",
+    "text": "Figures: Applying multiple parameters\nTo combine the above attributes, separate arguments by a space, for example:\n![](elephant.png){fig-alt=\"A drawing of an elephant.\" fig-align=\"left\" width=20%}",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#cross-reference-a-figure-in-your-document",
+    "href": "session-01.html#cross-reference-a-figure-in-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-reference a figure in your document",
+    "text": "Cross-reference a figure in your document\n\nYou need to add a figure ID with the fig- prefix\nuse @ to reference the figure\n\n\nCodeOutput\n\n\n![An Elephant](elephant.png){#fig-elephant}\n\nRefer to @fig-elephant for an illustration of an elephant. \n\n\n\n\n\n\n\n\nFigure 1: An Elephant\n\n\n\nRefer to Figure 1 for an illustration of an elephant.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-layout-in-two-columns",
+    "href": "session-01.html#figures-layout-in-two-columns",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Layout in two columns",
+    "text": "Figures: Layout in two columns\n\nUseful for side-by-side comparisons or holding two images on one page/slide\n\nCode\n::: {layout-ncol=\"2\"}\n![Surus](images/surus.png)\n\n![Hanno](images/hanno.png)\n:::",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#figures-layout-in-two-columns-1",
+    "href": "session-01.html#figures-layout-in-two-columns-1",
+    "title": "Getting Started with Quarto",
+    "section": "Figures: Layout in two columns",
+    "text": "Figures: Layout in two columns\nOutput\n\n\n\n\n\n\n\n\n\nSurus\n\n\n\n\n\n\n\nHanno\n\n\n\n\n\n\nTo learn more about different ways of figure layouts, refer to this page.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#tables",
+    "href": "session-01.html#tables",
+    "title": "Getting Started with Quarto",
+    "section": "Tables",
+    "text": "Tables\n\n\nThis is the markdown source for a pipe table:\n| Default | Left | Right | Center |\n|---------|:-----|------:|:------:|\n| 12      | 12   |    12 |   12   |\n| 123     | 123  |   123 |  123   |\n| 1       | 1    |     1 |   1    |\n\nOutput:\n\n\n\nDefault\nLeft\nRight\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nYou don’t have to construct a table by hand - use Quarto’s Visual Editor or an online markdown table generator like this one.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#table-caption",
+    "href": "session-01.html#table-caption",
+    "title": "Getting Started with Quarto",
+    "section": "Table Caption",
+    "text": "Table Caption\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices\n\n\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#table-attributes",
+    "href": "session-01.html#table-attributes",
+    "title": "Getting Started with Quarto",
+    "section": "Table Attributes",
+    "text": "Table Attributes\n\nMarkdownOutput\n\n\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[10,90]\"}\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#creating-tables-from-r-code-chunk-outputs",
+    "href": "session-01.html#creating-tables-from-r-code-chunk-outputs",
+    "title": "Getting Started with Quarto",
+    "section": "Creating tables from R code chunk outputs",
+    "text": "Creating tables from R code chunk outputs\nTo generate tables directly from R code chunk outputs, use the knitr::kable() function\n\n```{r}\nknitr::kable(head(ggplot2::diamonds))\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n0.23\nIdeal\nE\nSI2\n61.5\n55\n326\n3.95\n3.98\n2.43\n\n\n0.21\nPremium\nE\nSI1\n59.8\n61\n326\n3.89\n3.84\n2.31\n\n\n0.23\nGood\nE\nVS1\n56.9\n65\n327\n4.05\n4.07\n2.31\n\n\n0.29\nPremium\nI\nVS2\n62.4\n58\n334\n4.20\n4.23\n2.63\n\n\n0.31\nGood\nJ\nSI2\n63.3\n58\n335\n4.34\n4.35\n2.75\n\n\n0.24\nVery Good\nJ\nVVS2\n62.8\n57\n336\n3.94\n3.96\n2.48\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nkable() is a function from the knitr package that creates tables. It takes a data frame or matrix and turns it into a nicely formatted table.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\n| fruit  | price  |\n|--------|--------|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {#tbl-fruits}\n\n\n\n\n\n\nImportant\n\n\nIn order for a table to be cross-referenceable, its label must start with the tbl- prefix.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document-1",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document-1",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\n\n\n\nTable 1: Fruit prices\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#cross-referencing-a-table-in-your-document-2",
+    "href": "session-01.html#cross-referencing-a-table-in-your-document-2",
+    "title": "Getting Started with Quarto",
+    "section": "Cross-referencing a table in your document",
+    "text": "Cross-referencing a table in your document\nRefer to @tbl-fruits for price of fruits today.\n\nRefer to Table 1 for price of fruits today.",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#callout-box",
+    "href": "session-01.html#callout-box",
+    "title": "Getting Started with Quarto",
+    "section": "Callout box",
+    "text": "Callout box\n\n\n\n\n\n\n5 Types of callout blocks:\n- note\n- warning\n- important\n- tip\n- caution\n\n\nThis is how they look like:",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "session-01.html#callout-box-1",
+    "href": "session-01.html#callout-box-1",
+    "title": "Getting Started with Quarto",
+    "section": "Callout box",
+    "text": "Callout box\nCode:\n::: callout-tip\n\nAlternatively, use the Quarto Visual Editor!\n\n:::\nOutput\n\n\n\n\n\n\nTip\n\n\nAlternatively, use the Quarto Visual Editor!",
+    "crumbs": [
+      "Getting Started with Quarto"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "",
+    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
+  },
+  {
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "",
+    "text": "This workshop is Part 1 of SMU Researcher Club’s Try-it-together Quarto Series:\n\nPart 1: Try-it-together: Getting Started with Quarto for Academic Writing on 15 Oct, 2024\nPart 2: Try-it-together: Generate Reports and Presentation with Quarto on 22 Oct, 2024\nPart 3: Try-it-together: Building Your Research Website - From Quarto to the Web on 29 Oct, 2024\n\nIn academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.\nThe primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.\nQuarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming."
+  },
+  {
+    "objectID": "index.html#lesson-objectives",
+    "href": "index.html#lesson-objectives",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "Lesson Objectives",
+    "text": "Lesson Objectives\n\nUnderstand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.\nLearn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.\nGain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.\n\n\n\n\n\n\n\nNote\n\n\n\nPrior experience with R is highly recommended for this course."
+  },
+  {
+    "objectID": "index.html#pre-session-preparation",
+    "href": "index.html#pre-session-preparation",
+    "title": "Try-it-together: Getting Started with Quarto for Academic Writing",
+    "section": "Pre-session Preparation",
+    "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55\n\nDownload the hands-on exercises, which will be copied into your project folder during the lesson.\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\"))\nYou’re ready to go! You can close Rstudio for now and see you soon!"
+  }
+]
