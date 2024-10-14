@@ -28,11 +28,46 @@
     "text": "Pre-session Preparation\nPlease ensure that you have completed the following activities before the workshop begin:\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\n\nAlthough Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55\n\nDownload the hands-on exercises, which will be copied into your project folder during the lesson.\nInstall these R packages. Copy the following code and paste it in the Console tab (left side pane of RStudio), and then press Enter.\ninstall.packages(c( \"tidyverse\", \"gt\", \"rmarkdown\", \"gtsummary\", \"palmerpenguins\"))\nYou’re ready to go! You can close Rstudio for now and see you soon!"
   },
   {
+    "objectID": "hands-on/04-code-chunks.html",
+    "href": "hands-on/04-code-chunks.html",
+    "title": "Exploring code chunks and code annotations",
+    "section": "",
+    "text": "Amend the header of the following code chunks to fit their description. Below is a list of possible header options (not exhaustive). If you are using visual editor, RStudio will have auto-complete suggestions for values for each option.\n\necho\nlabel\neval\ninclude\noutput\nwarning\nmessage\nerror\ncache\nfig-width\nfig-height\nfig-cap\nfig-alt\nfig-align\nout-width\nout-height\nlayout\nlayout-ncol\nlayout-nrow\ncolumn\ncode-fold\ncode-summary\ncode-overflow\ncode-line-numbers\nexecution-count\ntbl-cap\ntbl-colwidths\ndf-print\ncomments\nengine\nresults\ncollapse\n\nChunk 1: Give the chunk below a label called “basic-chunk”\n\n# Create a simple data frame\ndf &lt;- data.frame(\n  x = 1:5,\n  y = c(2, 4, 6, 8, 10)\n)\nprint(df)\n\n  x  y\n1 1  2\n2 2  4\n3 3  6\n4 4  8\n5 5 10\n\n\nChunk 2: make this chunk hide output and show code:\n\n# Calculate correlation\ncor_xy &lt;- cor(df$x, df$y)\nprint(paste(\"The correlation between x and y is:\", cor_xy))\n\n[1] \"The correlation between x and y is: 1\"\n\n\nChunk 3: make this chunk show output, hide code:\n\n# Calculate mean of y\nmean_y &lt;- mean(df$y)\nprint(paste(\"The mean of y is:\", mean_y))\n\n[1] \"The mean of y is: 6\"\n\n\nChunk 4: Change figure width to 6, figure height to 4, and give it a caption.\n\nplot(df$x, df$y, main=\"Scatter Plot\", xlab=\"X\", ylab=\"Y\")\n\n\n\n\n\n\n\n\nChunk 5: Suppress warnings and messages\n\nlibrary(dplyr)  # This usually prints a message\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n# This operation usually gives a warning\n1:3 + 1:2\n\nWarning in 1:3 + 1:2: longer object length is not a multiple of shorter object\nlength\n\n\n[1] 2 4 4\n\n\n\n\n\n\nConvert the comments inside the code chunks below into annotations. Feel free to amend the comment to your liking if you think it’s not descriptive enough to the audience.\nRender the result to see how it looks like.\n\nChunk 6:\n\nnumbers &lt;- c(10, 20, 30, 40, 50) # create a number vector\nmean_value &lt;- mean(numbers) #Calculate the average\nprint(mean_value)\n\n[1] 30\n\n\nChunk 7:\n\nlibrary(dplyr) # load the dplyr library\n\n# Create a sample dataset\ndf &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Charlie\", \"David\"),\n  age = c(25, 30, 35, 28),\n  score = c(85, 92, 78, 95)\n)\n\nresult &lt;- df %&gt;%\n  filter(age &gt; 25) %&gt;% # Keep only rows where age &gt; 25\n  mutate(grade = case_when(\n    score &gt;= 90 ~ \"A\",\n    score &gt;= 80 ~ \"B\",\n    TRUE ~ \"C\"\n  )) %&gt;% # Add a new column 'grade' based on score\n  arrange(desc(score)) # Sort by score in descending order\n\nprint(result)\n\n     name age score grade\n1   David  28    95     A\n2     Bob  30    92     A\n3 Charlie  35    78     C\n\n\nChunk 8:\n\nlibrary(ggplot2) # load the ggplot2 library\n\nggplot(df, aes(x = age, y = score)) + # set the x and y axis\n  geom_point() + # Add scatter plot points\n  geom_smooth(method = \"lm\", se = FALSE) + # Add a linear regression line\n  labs(title = \"Age vs Score\", \n       x = \"Age\", \n       y = \"Score\") # Set plot labels\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nChunk 9:\n\nseq_numbers &lt;- seq(1, 10, by = 2) # Create a sequence from 1 to 10, step 2\nprint(seq_numbers) # print the sequence of number\n\n[1] 1 3 5 7 9"
+  },
+  {
+    "objectID": "hands-on/04-code-chunks.html#hands-on-exploring-code-chunks",
+    "href": "hands-on/04-code-chunks.html#hands-on-exploring-code-chunks",
+    "title": "Exploring code chunks and code annotations",
+    "section": "",
+    "text": "Amend the header of the following code chunks to fit their description. Below is a list of possible header options (not exhaustive). If you are using visual editor, RStudio will have auto-complete suggestions for values for each option.\n\necho\nlabel\neval\ninclude\noutput\nwarning\nmessage\nerror\ncache\nfig-width\nfig-height\nfig-cap\nfig-alt\nfig-align\nout-width\nout-height\nlayout\nlayout-ncol\nlayout-nrow\ncolumn\ncode-fold\ncode-summary\ncode-overflow\ncode-line-numbers\nexecution-count\ntbl-cap\ntbl-colwidths\ndf-print\ncomments\nengine\nresults\ncollapse\n\nChunk 1: Give the chunk below a label called “basic-chunk”\n\n# Create a simple data frame\ndf &lt;- data.frame(\n  x = 1:5,\n  y = c(2, 4, 6, 8, 10)\n)\nprint(df)\n\n  x  y\n1 1  2\n2 2  4\n3 3  6\n4 4  8\n5 5 10\n\n\nChunk 2: make this chunk hide output and show code:\n\n# Calculate correlation\ncor_xy &lt;- cor(df$x, df$y)\nprint(paste(\"The correlation between x and y is:\", cor_xy))\n\n[1] \"The correlation between x and y is: 1\"\n\n\nChunk 3: make this chunk show output, hide code:\n\n# Calculate mean of y\nmean_y &lt;- mean(df$y)\nprint(paste(\"The mean of y is:\", mean_y))\n\n[1] \"The mean of y is: 6\"\n\n\nChunk 4: Change figure width to 6, figure height to 4, and give it a caption.\n\nplot(df$x, df$y, main=\"Scatter Plot\", xlab=\"X\", ylab=\"Y\")\n\n\n\n\n\n\n\n\nChunk 5: Suppress warnings and messages\n\nlibrary(dplyr)  # This usually prints a message\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n# This operation usually gives a warning\n1:3 + 1:2\n\nWarning in 1:3 + 1:2: longer object length is not a multiple of shorter object\nlength\n\n\n[1] 2 4 4\n\n\n\n\n\n\nConvert the comments inside the code chunks below into annotations. Feel free to amend the comment to your liking if you think it’s not descriptive enough to the audience.\nRender the result to see how it looks like.\n\nChunk 6:\n\nnumbers &lt;- c(10, 20, 30, 40, 50) # create a number vector\nmean_value &lt;- mean(numbers) #Calculate the average\nprint(mean_value)\n\n[1] 30\n\n\nChunk 7:\n\nlibrary(dplyr) # load the dplyr library\n\n# Create a sample dataset\ndf &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Charlie\", \"David\"),\n  age = c(25, 30, 35, 28),\n  score = c(85, 92, 78, 95)\n)\n\nresult &lt;- df %&gt;%\n  filter(age &gt; 25) %&gt;% # Keep only rows where age &gt; 25\n  mutate(grade = case_when(\n    score &gt;= 90 ~ \"A\",\n    score &gt;= 80 ~ \"B\",\n    TRUE ~ \"C\"\n  )) %&gt;% # Add a new column 'grade' based on score\n  arrange(desc(score)) # Sort by score in descending order\n\nprint(result)\n\n     name age score grade\n1   David  28    95     A\n2     Bob  30    92     A\n3 Charlie  35    78     C\n\n\nChunk 8:\n\nlibrary(ggplot2) # load the ggplot2 library\n\nggplot(df, aes(x = age, y = score)) + # set the x and y axis\n  geom_point() + # Add scatter plot points\n  geom_smooth(method = \"lm\", se = FALSE) + # Add a linear regression line\n  labs(title = \"Age vs Score\", \n       x = \"Age\", \n       y = \"Score\") # Set plot labels\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nChunk 9:\n\nseq_numbers &lt;- seq(1, 10, by = 2) # Create a sequence from 1 to 10, step 2\nprint(seq_numbers) # print the sequence of number\n\n[1] 1 3 5 7 9"
+  },
+  {
+    "objectID": "hands-on/03b-penguins.html",
+    "href": "hands-on/03b-penguins.html",
+    "title": "Hands-on #3b: Penguins",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "hands-on/03b-penguins.html#meet-quarto",
+    "href": "hands-on/03b-penguins.html#meet-quarto",
+    "title": "Hands-on #3b: Penguins",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "hands-on/03b-penguins.html#meet-the-penguins",
+    "href": "hands-on/03b-penguins.html#meet-the-penguins",
+    "title": "Hands-on #3b: Penguins",
+    "section": "Meet the penguins",
+    "text": "Meet the penguins\n\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\nThe plot below shows the relationship between flipper and bill lengths of these penguins."
+  },
+  {
     "objectID": "session-01.html#about-this-workshop",
     "href": "session-01.html#about-this-workshop",
     "title": "Getting Started with Quarto",
     "section": "About this Workshop",
-    "text": "About this Workshop\n\nPrior experience with R is highly recommended for this course\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\nIf you need help at any time, please let one of the instructors know.",
+    "text": "About this Workshop\n\nPrior experience with R is highly recommended for this course\nWorkshop Website (built with Quarto)\n\nPre-workshop setup instructions\nWorkshop materials\nLesson objectives and lesson plan\n\n\n\n\n\n\n\n\nNote\n\n\nIf you need help at any time, please raise your hand.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -42,17 +77,7 @@
     "href": "session-01.html#learning-objectives",
     "title": "Getting Started with Quarto",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nDescribe how Quarto can enhance transparency in scientific and technical publishing.\nUse RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.\nPublish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.\nUse Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.",
-    "crumbs": [
-      "Getting Started with Quarto"
-    ]
-  },
-  {
-    "objectID": "session-01.html#setup-and-instructions",
-    "href": "session-01.html#setup-and-instructions",
-    "title": "Getting Started with Quarto",
-    "section": "Setup and Instructions",
-    "text": "Setup and Instructions\n\nDownload and install the latest version of R\nDownload and install the latest version of RStudio\nDownload and install the latest version of Quarto\nClone the GitHub repository from https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git and installed the required packages - Refer to instructions",
+    "text": "Learning Objectives\nBy the end of the session, participants will be able to:\n\nUnderstand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.\nLearn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.\nGain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -182,7 +207,7 @@
     "href": "session-01.html#executable-python-code-blocks-in-quarto",
     "title": "Getting Started with Quarto",
     "section": "Executable Python code blocks in Quarto",
-    "text": "Executable Python code blocks in Quarto\n\nInstall the reticulate package to seamlessly integrate Python code chunks in Quarto install.packages(\"reticulate\")\nWhen you use a Python chunk in a Quarto document, knitr uses reticulate to execute the Python code\n\n\n\nNote: Knitr is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.",
+    "text": "Executable Python code blocks in Quarto\n\nInstall the reticulate package to seamlessly integrate Python code chunks in Quarto install.packages(\"reticulate\")\nWhen you use a Python chunk in a Quarto document, knitr uses reticulate to execute the Python code\n\n\n\n\n\n\n\nNote\n\n\nNote: Knitr is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.",
     "crumbs": [
       "Getting Started with Quarto"
     ]
@@ -536,5 +561,61 @@
     "crumbs": [
       "Getting Started with Quarto"
     ]
+  },
+  {
+    "objectID": "hands-on/01-basics.html",
+    "href": "hands-on/01-basics.html",
+    "title": "Hands-on #1: Basics",
+    "section": "",
+    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+  },
+  {
+    "objectID": "hands-on/01-basics.html#hands-on-your-first-quarto-document",
+    "href": "hands-on/01-basics.html#hands-on-your-first-quarto-document",
+    "title": "Hands-on #1: Basics",
+    "section": "",
+    "text": "Click on New File –&gt; Quarto Document to create a blank .qmd file\nUpdate YAML header: title, author, date and set format to html format: html\nUse visual editor OR markdown editor to add headings - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor\nAdd some text in bold or italics\nRender the document using the Render button"
+  },
+  {
+    "objectID": "hands-on/01-basics.html#hands-on-markdown-basics",
+    "href": "hands-on/01-basics.html#hands-on-markdown-basics",
+    "title": "Hands-on #1: Basics",
+    "section": "Hands-on: Markdown Basics",
+    "text": "Hands-on: Markdown Basics\n\nInstructions:\n\nAdd some numbered list and non-numbered list, using the visual editor. Switch back to the markdown editor and take note of the syntax. Try creating lists using codes as well.\nAdd a piece of text and hyperlink it to a URL.\nInsert the image of a cat cafe into your report. The path to the image is cat-cafe.jpg\n\n\n\n\n\n\nTip\n\n\n\nHint: Use the syntax ![caption](path_to_image). For example, ![Elephant](elephant.png)\n\n\nAdd some executable R code or verbatim code (feel free to use the codes below in the Sample Report).\nRender the document to see the output."
+  },
+  {
+    "objectID": "hands-on/01-basics.html#sample-report",
+    "href": "hands-on/01-basics.html#sample-report",
+    "title": "Hands-on #1: Basics",
+    "section": "Sample Report",
+    "text": "Sample Report\nFeel free to make use of this sample report and try recreating it in your First Quarto Document!\n\nResearch Question\nDo cats prefer window seats or cozy corners in cat cafés?\n\n\nData Collection\nWe observed 50 cats in 5 different cat cafés. We recorded:\n- Cat’s choice of spot (window or corner)\n- Cat’s age (young, adult, senior)\n- Time of day (morning, afternoon, evening)\n\n\nAnalysis\n\n# Create a simple pie chart\ncat_spots &lt;- c(window = 30, corner = 20)\npie(cat_spots, main=\"Cat's Favorite Spots\")"
+  },
+  {
+    "objectID": "hands-on/03a-figures-tables.html",
+    "href": "hands-on/03a-figures-tables.html",
+    "title": "Hands-on #3a: Figures, Tables and Cross-References",
+    "section": "",
+    "text": "Open the 03b-penguins.qmd Quarto Document. At the top of the report about Penguins, add adelie.jpg with the following settings:\n\nSize of the image should occupy 80% width of the content space\ncenter-aligned\ninclude alt text for accessibility\nadd a figure ID #fig-adelie\n\nWrite a paragraph at the end of the document, making reference to the figure #fig-adelie\n\n\n\n\n\nRecreate the table below with a caption “Penguin Species Count”. You may create the table using the visual editor (or if feel free to do it by hand if you prefer), and switch to source editor to observe how the source table is formatted.\n\nNow, make the Count column right-aligned\nUse the knitr::kable() function to format the table output from the code chunk below.\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\npenguins %&gt;% count(species) #take the penguins dataset from palmerpenguins package and count the number of each species\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\n\n\nCreate a two-column layout:\n\nIn the left column, insert a figure with proper attributes\nIn the right column, create a table with a caption\n\n\n\n\nIn the table below, what does {.striped .hover} do?\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "hands-on/03a-figures-tables.html#hands-on-figures-tables-and-cross-references",
+    "href": "hands-on/03a-figures-tables.html#hands-on-figures-tables-and-cross-references",
+    "title": "Hands-on #3a: Figures, Tables and Cross-References",
+    "section": "",
+    "text": "Open the 03b-penguins.qmd Quarto Document. At the top of the report about Penguins, add adelie.jpg with the following settings:\n\nSize of the image should occupy 80% width of the content space\ncenter-aligned\ninclude alt text for accessibility\nadd a figure ID #fig-adelie\n\nWrite a paragraph at the end of the document, making reference to the figure #fig-adelie\n\n\n\n\n\nRecreate the table below with a caption “Penguin Species Count”. You may create the table using the visual editor (or if feel free to do it by hand if you prefer), and switch to source editor to observe how the source table is formatted.\n\nNow, make the Count column right-aligned\nUse the knitr::kable() function to format the table output from the code chunk below.\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\npenguins %&gt;% count(species) #take the penguins dataset from palmerpenguins package and count the number of each species\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\n\n\nCreate a two-column layout:\n\nIn the left column, insert a figure with proper attributes\nIn the right column, create a table with a caption\n\n\n\n\nIn the table below, what does {.striped .hover} do?\n\nFruit prices\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "hands-on/02-YAML.html",
+    "href": "hands-on/02-YAML.html",
+    "title": "Hands-on #2: More YAML",
+    "section": "",
+    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n\n\n  id      value category subcategory       date\n1  1  1.6211899        C           Z 2023-01-01\n2  2 -0.8935331        C           X 2023-01-02\n3  3  0.4356744        B           Z 2023-01-03\n4  4 -1.3527186        C           Y 2023-01-04\n5  5 -1.7616731        C           Z 2023-01-05\n6  6  0.7639748        B           X 2023-01-06"
+  },
+  {
+    "objectID": "hands-on/02-YAML.html#hands-on-more-yaml",
+    "href": "hands-on/02-YAML.html#hands-on-more-yaml",
+    "title": "Hands-on #2: More YAML",
+    "section": "",
+    "text": "Use the Quarto document you created earlier, try different YAML options and render the document to see the resulting changes on the output document. Make sure to have different level headings, some text, and some executable codes - you can copy the sample code chunk below.\nTable of Contents\n\nAdd your table of contents toc: true\nChange the depth of your Table of Contents, e.g. toc-depth: 3\nType number-sections and click on TAB on your keyboard, What do you see? What does this YAML option do?\nChange to other format, e.g. html, PDF, pptx, revealjs. How does the layout change?\n\nLook & Feel\n\nPick a HTML theme at this link to be applied on your document, e.g. theme: \"quartz\"\nRender with terminal and Quarto console\n\nCode & Execution\nTry the YAML options below and find out what they do. Use # to write down your answers in the code chunk. Note: Ensure that there are some executable code chunks in your document.\n    highlight-style: \"breeze\" #this is to change the code highlighting style\n    code-line-numbers: \n    code-tools: \n    code-fold:          #press TAB to see available options\n    code-overflow:      #press TAB to see available options\n    echo: false  # whether to show the code \n    eval: true # whether to run the code \n    warning:\n    error:\nCheck out more highlighting styles here.\n\n\n\nYou may copy the code chunk below into your document, so as to try out the code and execution-related settings.\n\n\nCode\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\nCode\n## Use this very loooong code line to test code-overflow options\n\nresult &lt;- data.frame(id = 1:100, value = rnorm(100), category = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE), subcategory = sample(c(\"X\", \"Y\", \"Z\"), 100, replace = TRUE), date = seq.Date(from = as.Date(\"2023-01-01\"), by = \"day\", length.out = 100))\n\nhead(result)\n\n\n  id      value category subcategory       date\n1  1  1.6211899        C           Z 2023-01-01\n2  2 -0.8935331        C           X 2023-01-02\n3  3  0.4356744        B           Z 2023-01-03\n4  4 -1.3527186        C           Y 2023-01-04\n5  5 -1.7616731        C           Z 2023-01-05\n6  6  0.7639748        B           X 2023-01-06"
   }
 ]

@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Bella Ratmelia &amp; Dong Danping">
+  <meta name="author" content="Danping DONG &amp; Bella RATMELIA">
   <title>Try-it-together: Quarto Basics – Getting Started with Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -396,7 +396,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Bella Ratmelia &amp; Dong Danping 
+Danping DONG &amp; Bella RATMELIA 
 </div>
 </div>
 </div>
@@ -414,34 +414,34 @@ Bella Ratmelia &amp; Dong Danping
 <h2>About this Workshop</h2>
 <ul>
 <li>Prior experience with R is highly recommended for this course</li>
-<li>Workshop Website (built with Quarto)
+<li><a href="https://dpdong19.github.io/202410Quarto">Workshop Website</a> (built with Quarto)
 <ul>
 <li>Pre-workshop setup instructions</li>
 <li>Workshop materials</li>
 <li>Lesson objectives and lesson plan</li>
 </ul></li>
 </ul>
-
-<aside><div>
-<p>If you need help at any time, please let one of the instructors know.</p>
-</div></aside></section>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If you need help at any time, please raise your hand.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="learning-objectives" class="slide level2">
 <h2>Learning Objectives</h2>
 <p>By the end of the session, participants will be able to:</p>
 <ol type="1">
-<li><p>Describe how Quarto can enhance transparency in scientific and technical publishing.</p></li>
-<li><p>Use RStudio to combine narrative text, R code, mathematical formulas, and citations within Quarto to produce polished and verifiable research documents.</p></li>
-<li><p>Publish Quarto documents into the following format: static HTML document, Word, PDF and RevealJS presentation to cater to different publication and presentation needs.</p></li>
-<li><p>Use Quarto Pub or GitHub Pages to create websites to communicate their research findings to a wider audience.</p></li>
-</ol>
-</section>
-<section id="setup-and-instructions" class="slide level2">
-<h2>Setup and Instructions</h2>
-<ol type="1">
-<li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</li>
-<li><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</li>
-<li><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</li>
-<li>Clone the GitHub repository from <code>https://github.com/bellaratmelia/2024-fsci-quarto-handouts.git</code> and installed the required packages - Refer to <a href="https://bellaratmelia.github.io/2024-fsci-quarto/#pre-session-preparation">instructions</a></li>
+<li>Understand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.</li>
+<li>Learn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.</li>
+<li>Gain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.</li>
 </ol>
 </section>
 <section id="outline-for-today" class="slide level2">
@@ -649,28 +649,19 @@ Bella Ratmelia &amp; Dong Danping
 <li>Install the <code>reticulate</code> package to seamlessly integrate Python code chunks in Quarto <code>install.packages("reticulate")</code></li>
 <li>When you use a Python chunk in a Quarto document, <code>knitr</code> uses <code>reticulate</code> to execute the Python code</li>
 </ul>
-
-<aside><div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
 <p>Note: <code>Knitr</code> is a dynamic report generation engine for R that executes code chunks embedded in documents, integrating the results seamlessly into the output, thus enabling reproducible research and literate programming.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co">#| label: cat-ages</span></span>
-<span id="cb2-2"><a></a><span class="co">#| echo: true</span></span>
-<span id="cb2-3"><a></a><span class="co">#| execution: false</span></span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="co"># Dictionary of cats and their ages</span></span>
-<span id="cb2-6"><a></a>cat_ages <span class="op">=</span> {</span>
-<span id="cb2-7"><a></a>    <span class="st">"Whiskers"</span>: <span class="dv">3</span>,</span>
-<span id="cb2-8"><a></a>    <span class="st">"Mittens"</span>: <span class="dv">5</span>,</span>
-<span id="cb2-9"><a></a>    <span class="st">"Ginger"</span>: <span class="dv">2</span>,</span>
-<span id="cb2-10"><a></a>    <span class="st">"Luna"</span>: <span class="dv">4</span>,</span>
-<span id="cb2-11"><a></a>    <span class="st">"Oreo"</span>: <span class="dv">1</span></span>
-<span id="cb2-12"><a></a>}</span>
-<span id="cb2-13"><a></a></span>
-<span id="cb2-14"><a></a><span class="co"># Calculate average age</span></span>
-<span id="cb2-15"><a></a>average_age <span class="op">=</span> <span class="bu">sum</span>(cat_ages.values()) <span class="op">/</span> <span class="bu">len</span>(cat_ages)</span>
-<span id="cb2-16"><a></a><span class="bu">print</span>(<span class="ss">f"Average age of cats: </span><span class="sc">{</span>average_age<span class="sc">:.1f}</span><span class="ss"> years"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="anatomy-of-a-quarto-document" class="slide level2">
 <h2>Anatomy of a Quarto document</h2>
@@ -684,10 +675,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb4-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb4-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -735,19 +726,19 @@ This is a sentence with some **bold text**.</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>*italics*, **bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a>superscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
 </tr>
 <tr class="odd">
-<td><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a>~~strikethrough~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><del>strikethrough</del></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="in">`verbatim code`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><code>verbatim code</code></td>
 </tr>
 </tbody>
@@ -833,10 +824,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb17-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb17-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb16-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -978,10 +969,10 @@ format: html
 <li><strong>Code</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb25-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
-<span id="cb25-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
-<span id="cb25-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb24-2"><a></a>mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a></a>  <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(mpg), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><strong>Text</strong></li>
@@ -1395,9 +1386,9 @@ Figure&nbsp;1: An Elephant
 <h2>Creating tables from R code chunk outputs</h2>
 <p>To generate tables directly from R code chunk outputs, use the <code>knitr::kable()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb38-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
-<span id="cb38-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb37-2"><a></a><span class="in">knitr::kable(head(ggplot2::diamonds))</span></span>
+<span id="cb37-3"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top" style="width:100%;">
 <colgroup>

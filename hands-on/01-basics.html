@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dong Danping">
-<meta name="dcterms.date" content="2024-10-15">
+<meta name="author" content="Danping">
 
-<title>Try-it-together: Getting Started with Quarto for Academic Writing – Try-it-together: Quarto Basics</title>
+<title>Hands-on #1: Basics – Try-it-together: Quarto Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,25 +21,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -80,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Try-it-together: Quarto Basics</span>
     </a>
   </div>
@@ -91,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -100,11 +133,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-materials">    
         <li>
-    <a class="dropdown-item" href="./session-01.html">
+    <a class="dropdown-item" href="../session-01.html">
  <span class="dropdown-text">Getting Started with Quarto</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hands-on/202410Quarto-handout-part1.zip">
+    <a class="dropdown-item" href="../hands-on/202410Quarto-handout-part1.zip">
  <span class="dropdown-text">Download Hands-on Exercises</span></a>
   </li>  
     </ul>
@@ -115,19 +148,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-hands-on-exercises">    
         <li>
-    <a class="dropdown-item" href="./hands-on/01-basics.html">
+    <a class="dropdown-item" href="../hands-on/01-basics.html">
  <span class="dropdown-text">Hands-on #1: Basics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hands-on/02-YAML.html">
+    <a class="dropdown-item" href="../hands-on/02-YAML.html">
  <span class="dropdown-text">Hands-on #2: More YAML</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hands-on/03a-figures-tables.html">
+    <a class="dropdown-item" href="../hands-on/03a-figures-tables.html">
  <span class="dropdown-text">Hands-on #3a: Figures, Tables and Cross-References</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hands-on/03b-penguins.html">
+    <a class="dropdown-item" href="../hands-on/03b-penguins.html">
  <span class="dropdown-text">Hands-on #3b: Penguins</span></a>
   </li>  
     </ul>
@@ -148,9 +181,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-this-course" id="toc-about-this-course" class="nav-link active" data-scroll-target="#about-this-course">About This Course</a></li>
-  <li><a href="#lesson-objectives" id="toc-lesson-objectives" class="nav-link" data-scroll-target="#lesson-objectives">Lesson Objectives</a></li>
-  <li><a href="#pre-session-preparation" id="toc-pre-session-preparation" class="nav-link" data-scroll-target="#pre-session-preparation">Pre-session Preparation</a></li>
+  <li><a href="#hands-on-your-first-quarto-document" id="toc-hands-on-your-first-quarto-document" class="nav-link active" data-scroll-target="#hands-on-your-first-quarto-document">Hands-on: Your first Quarto document</a>
+  <ul class="collapse">
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  </ul></li>
+  <li><a href="#hands-on-markdown-basics" id="toc-hands-on-markdown-basics" class="nav-link" data-scroll-target="#hands-on-markdown-basics">Hands-on: Markdown Basics</a>
+  <ul class="collapse">
+  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions:</a></li>
+  </ul></li>
+  <li><a href="#sample-report" id="toc-sample-report" class="nav-link" data-scroll-target="#sample-report">Sample Report</a></li>
   </ul>
 </nav>
     </div>
@@ -159,33 +198,20 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Try-it-together: Getting Started with Quarto for Academic Writing</h1>
+<h1 class="title">Hands-on #1: Basics</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Dong Danping <a href="mailto:dpdong@smu.edu.sg" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Singapore Management University
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 15, 2024</p>
-    </div>
+             <p>Danping </p>
+          </div>
   </div>
+    
   
     
   </div>
@@ -195,56 +221,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-course" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-course">About This Course</h2>
-<p>This workshop is Part 1 of SMU Researcher Club’s <em>Try-it-together Quarto Series</em>:</p>
-<ul>
-<li>Part 1: <a href="https://smu-sg.libcal.com/event/5732787">Try-it-together: Getting Started with Quarto for Academic Writing</a> on 15 Oct, 2024</li>
-<li>Part 2: <a href="https://smu-sg.libcal.com/event/5732794">Try-it-together: Generate Reports and Presentation with Quarto</a> on 22 Oct, 2024</li>
-<li>Part 3: <a href="https://smu-sg.libcal.com/event/5732795">Try-it-together: Building Your Research Website - From Quarto to the Web</a> on 29 Oct, 2024</li>
-</ul>
-<p>In academic research, the journey from raw data to published findings often lacks transparency, posing significant challenges to reproducibility and trust in scientific research. This situation highlights the need for enhanced transparency and traceability within research methodologies.</p>
-<p>The primary objective of this 3-part course is to equip participants with the necessary skills to use Quarto and RStudio to publish research in a transparent and reproducible way. These tools enable an integrated research workflow encompassing data cleaning, analysis, visualization, and publishing, producing verifiable research outputs and artifacts. They facilitate validation and replication of research findings, thereby enhancing the integrity and credibility of published work.</p>
-<p>Quarto, an open-source scientific publishing system, allows researchers to weave together narrative text, code, mathematical formulas (using LATeX), and even citations to produce elegantly formatted output as documents, web pages, blog posts, books and other formats to cater to diverse publishing needs. While Quarto is also compatible with Python and Julia, the course will predominantly focus on its application in R programming.</p>
-</section>
-<section id="lesson-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="lesson-objectives">Lesson Objectives</h2>
+<section id="hands-on-your-first-quarto-document" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-your-first-quarto-document">Hands-on: Your first Quarto document</h2>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">Instructions</h3>
 <ol type="1">
-<li>Understand the fundamental concepts of Quarto, including its role in promoting transparency and reproducibility in academic writing.</li>
-<li>Learn how to navigate the Quarto interface within RStudio, focusing on the basics of Markdown for structuring academic documents.</li>
-<li>Gain hands-on experience in creating simple Quarto documents by integrating narrative text, code, figures, and tables.</li>
+<li>Click on <code>New File</code> –&gt; <code>Quarto Document</code> to create a blank <code>.qmd</code> file</li>
+<li><strong>Update YAML header</strong>: title, author, date and set format to html <code>format: html</code></li>
+<li><strong>Use <em>visual editor</em> OR <em>markdown editor</em> to add headings</strong> - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor</li>
+<li>Add some text in bold or italics</li>
+<li>Render the document using the <code>Render</code> button</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
+</section>
+</section>
+<section id="hands-on-markdown-basics" class="level2">
+<h2 class="anchored" data-anchor-id="hands-on-markdown-basics">Hands-on: Markdown Basics</h2>
+<section id="instructions-1" class="level3">
+<h3 class="anchored" data-anchor-id="instructions-1">Instructions:</h3>
+<ol type="1">
+<li><p>Add some <strong>numbered list</strong> and <strong>non-numbered list</strong>, using the <em>visual editor.</em> Switch back to the <em>markdown editor</em> and take note of the syntax. Try creating lists using codes as well.</p></li>
+<li><p>Add a piece of text and <strong>hyperlink</strong> it to a URL.</p></li>
+<li><p>Insert the <strong>image</strong> of a cat cafe into your report. The path to the image is <code>cat-cafe.jpg</code></p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Prior experience with R is highly recommended for this course.</em></p>
+<p>Hint: Use the syntax <code>![caption](path_to_image)</code>. For example, <code>![Elephant](elephant.png)</code></p>
 </div>
-</div>
-</section>
-<section id="pre-session-preparation" class="level2">
-<h2 class="anchored" data-anchor-id="pre-session-preparation">Pre-session Preparation</h2>
-<p>Please ensure that you have completed the following activities before the workshop begin:</p>
-<ol type="1">
-<li><p><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of R</p></li>
-<li><p><a href="https://posit.co/download/rstudio-desktop/">Download</a> and install the latest version of RStudio</p></li>
-<li><p><a href="https://quarto.org/docs/download/index.html">Download</a> and install the latest version of Quarto</p>
-<ul>
-<li>Although Quarto comes bundled with RStudio, it is often a few versions behind. The bundled version is version 1.22, while the latest version is on 1.5.55</li>
-</ul></li>
-<li><p><a href="hands-on/202410Quarto-handout-part1.zip">Download the hands-on exercises</a>, which will be copied into your project folder during the lesson.</p></li>
-<li><p>Install these R packages. Copy the following code and paste it in the <strong>Console</strong> tab (left side pane of RStudio), and then press Enter.</p>
-<p><code>install.packages(c( "tidyverse", "gt", "rmarkdown", "gtsummary", "palmerpenguins"))</code></p></li>
-<li><p>You’re ready to go! You can close Rstudio for now and see you soon!</p></li>
+</div></li>
+<li><p>Add some executable R code or verbatim code (feel free to use the codes below in the Sample Report).</p></li>
+<li><p>Render the document to see the output.</p></li>
 </ol>
+</section>
+</section>
+<section id="sample-report" class="level2">
+<h2 class="anchored" data-anchor-id="sample-report">Sample Report</h2>
+<p>Feel free to make use of this sample report and try recreating it in your First Quarto Document!</p>
+<section id="research-question" class="level4">
+<h4 class="anchored" data-anchor-id="research-question">Research Question</h4>
+<p>Do cats prefer window seats or cozy corners in cat cafés?</p>
+</section>
+<section id="data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="data-collection">Data Collection</h4>
+<p>We observed 50 cats in 5 different cat cafés. We recorded:</p>
+<p>- Cat’s choice of spot (window or corner)</p>
+<p>- Cat’s age (young, adult, senior)</p>
+<p>- Time of day (morning, afternoon, evening)</p>
+</section>
+<section id="analysis" class="level4">
+<h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple pie chart</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>cat_spots <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">window =</span> <span class="dv">30</span>, <span class="at">corner =</span> <span class="dv">20</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(cat_spots, <span class="at">main=</span><span class="st">"Cat's Favorite Spots"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01-basics_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
