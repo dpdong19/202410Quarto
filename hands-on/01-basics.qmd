@@ -2,16 +2,29 @@
 title: "Hands-on #1: Basics"
 author: "Danping"
 format: html
+date: 2024-10-15
 ---
 
-## Hands-on: Your first Quarto document
+## Hands-on: Your first Quarto Project
 
 ### Instructions
 
-1.  Click on `New File` –\> `Quarto Document` to create a blank `.qmd` file
+1.  Click on `New Project`–\> `New Directory` -\> `Quarto Project` to create a new Quarto Project.
+
+    ![](/images/new-project.PNG){width="500"}
+
+    This will initiate a new project space with 3 files: `_quarto.yml`, `my-quarto-project.qmd` and `my-quarto-project.Rproj` (file name will be the same as what you typed earlier on).
+
+    `my-quarto-project.qmd` is automatically open, and this is your first Quarto document!
+
+    ![](images/clipboard-299694102.png)
+
 2.  **Update YAML header**: title, author, date and set format to html `format: html`
+
 3.  **Use *visual editor* OR *markdown editor* to add headings** - to get familiarized with the interface and switch between the two editors. Instructor will use visual editor followed by markdown editor
+
 4.  Add some text in bold or italics
+
 5.  Render the document using the `Render` button
 
 ## Hands-on: Markdown Basics
