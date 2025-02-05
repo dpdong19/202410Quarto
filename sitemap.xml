@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dpdong19.github.io/202410Quarto/index.html</loc>
-    <lastmod>2024-10-14T15:59:21.039Z</lastmod>
+    <loc>https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html</loc>
+    <lastmod>2025-02-05T09:47:52.350Z</lastmod>
   </url>
   <url>
     <loc>https://dpdong19.github.io/202410Quarto/hands-on/04-code-chunks.html</loc>
-    <lastmod>2024-10-14T15:59:20.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dpdong19.github.io/202410Quarto/hands-on/03b-penguins.html</loc>
-    <lastmod>2024-10-14T15:59:20.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dpdong19.github.io/202410Quarto/session-01.html</loc>
-    <lastmod>2024-10-14T15:59:21.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dpdong19.github.io/202410Quarto/hands-on/01-basics.html</loc>
-    <lastmod>2024-10-14T15:59:20.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dpdong19.github.io/202410Quarto/hands-on/03a-figures-tables.html</loc>
-    <lastmod>2024-10-14T15:59:20.999Z</lastmod>
+    <lastmod>2025-02-05T09:47:52.350Z</lastmod>
   </url>
   <url>
     <loc>https://dpdong19.github.io/202410Quarto/hands-on/02-YAML.html</loc>
-    <lastmod>2024-10-14T15:59:20.999Z</lastmod>
+    <lastmod>2025-02-05T09:47:52.350Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dpdong19.github.io/202410Quarto/session-01.html</loc>
+    <lastmod>2025-02-05T09:47:52.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dpdong19.github.io/202410Quarto/index.html</loc>
+    <lastmod>2025-02-05T09:47:52.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dpdong19.github.io/202410Quarto/hands-on/03a-figures-tables.html</loc>
+    <lastmod>2025-02-05T09:47:52.350Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dpdong19.github.io/202410Quarto/hands-on/03b-penguins.html</loc>
+    <lastmod>2025-02-05T09:47:52.350Z</lastmod>
   </url>
 </urlset>
